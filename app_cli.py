@@ -167,7 +167,6 @@ def show_help() -> None:
     print(f"{Fore.BLUE}• help{Style.RESET_ALL}: Show this help message")
 
 def display_welcome_banner() -> None:
-    """Display a styled 3D welcome banner."""
     banner = """
      █████╗ ██╗    █████╗ ███████╗███████╗██╗███████╗████████╗ █████╗ ███╗   ██╗████████╗
     ██╔══██╗██║   ██╔══██╗██╔════╝██╔════╝██║██╔════╝╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝
@@ -179,7 +178,7 @@ def display_welcome_banner() -> None:
 Type 'help' to see available tools
 Type 'clear' to start new chat
 """
-    print(f"{Fore.BLUE}{create_centered_box(banner)}{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}{Back.BLACK}{create_centered_box(banner)}{Style.RESET_ALL}")
 
 def chat_loop() -> None:
     """Main chat interaction loop."""
