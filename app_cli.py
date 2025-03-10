@@ -167,13 +167,18 @@ def show_help() -> None:
     print(f"{Fore.BLUE}• help{Style.RESET_ALL}: Show this help message")
 
 def display_welcome_banner() -> None:
-    """Display a styled welcome banner."""
+    """Display a styled 3D welcome banner."""
     banner = """
-Welcome to AI Assistant
+     █████╗ ██╗    █████╗ ███████╗███████╗██╗███████╗████████╗ █████╗ ███╗   ██╗████████╗
+    ██╔══██╗██║   ██╔══██╗██╔════╝██╔════╝██║██╔════╝╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝
+    ███████║██║   ███████║███████╗███████╗██║███████╗   ██║   ███████║██╔██╗ ██║   ██║   
+    ██╔══██║██║   ██╔══██║╚════██║╚════██║██║╚════██║   ██║   ██╔══██║██║╚██╗██║   ██║   
+    ██║  ██║██║   ██║  ██║███████║███████║██║███████║   ██║   ██║  ██║██║ ╚████║   ██║   
+    ╚═╝  ╚═╝╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   
 
 Type 'help' to see available tools
-Type 'clear' to start new chat"""
-
+Type 'clear' to start new chat
+"""
     print(f"{Fore.BLUE}{create_centered_box(banner)}{Style.RESET_ALL}")
 
 def chat_loop() -> None:
@@ -253,7 +258,7 @@ def chat_loop() -> None:
 
                     if tool_name == "search_info":
                         print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
-                        results = search_info(arguments["query"], 1)
+                        results = search_info(arguments["query"], 2)
                         for i,result in enumerate(results):
                             print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
                     

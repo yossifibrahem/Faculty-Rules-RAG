@@ -36,8 +36,7 @@ Tools = [{
         "description": (
             "Use this every time the stuedent asks a question that require looking for."
             "This tool searches the faculty rules and regulations for the given query."
-            "The query should describe what the user is looking for in details."
-            "The tool returns the most relevant information found in the rules."
+            "The tool returns the relevant information found in the rules."
         ),
         "parameters": {
             "type": "object",
@@ -203,7 +202,7 @@ def chat():
                         yield f"data: {json.dumps({'type': 'tool-start', 'name': tool_name, 'args': arguments})}\n\n"
                         
                         if tool_name == "search_info":
-                            result = search_info(arguments["query"])
+                            result = search_info(arguments["query"], 3)
                             
                         chat_messages.append({
                                     "role": "tool",

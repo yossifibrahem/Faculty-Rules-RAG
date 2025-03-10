@@ -47,7 +47,7 @@ Executive Regulations of the Universities Law
 
 General Provisions
 
-Article (1) The academic degree granted to graduates:
+Article 1 The academic degree granted to graduates:
 
 At the request of the Faculty Council, the Alexandria University Council grants a Bachelor’s degree in Computer Science and Data Science in one of the following programs:
 
@@ -62,7 +62,7 @@ At the request of the Faculty Council, the Alexandria University Council grants 
 
 <split>
 
-Article (2) Academic Systems of the College:
+Article 2 Academic Systems of the College:
 
 The College of Computers and Data Sciences consists of two academic departments:
 
@@ -77,7 +77,7 @@ The College of Computers and Data Sciences consists of two academic departments:
 
 <split>
 
-Article (3) General Conditions for Admission:
+Article 3 General Conditions for Admission:
 
 Alexandria University is subject to the admission system of Egyptian public universities, and incoming students from all countries are accepted after the approval of the General Administration of Incoming Students and the competent authorities in the country of assignment and after the student passes the admission tests according to what is determined by the College Council.
 
@@ -125,7 +125,7 @@ English is the official language of study in the college, and some courses may b
 
 <split>
 
-Article (8) Requirements for Obtaining the Academic Degree:
+Article 8 Requirements for Obtaining the Academic Degree:
 
 Obtaining a Bachelor's degree in Computer Science and Data Sciences according to the credit hour system requires passing
 
@@ -285,7 +285,7 @@ E. If a student fails to attend the final exam for any course without An excuse 
 
 <split>
 
-Article (18) Repetition of the course
+Article 18 Repetition of the course
 
 A. If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
 B. If the student gets an unsatisfactory level U in one of the graduation requirements, he must re-study this course.
