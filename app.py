@@ -55,10 +55,11 @@ if not os.path.exists(CONVERSATIONS_DIR):
 
 current_conversation_id = None
 chat_messages = [
-                {"role": "system",
-                "content": "you are consultant in faculty of Computers and data science,"
-                " your job is to Assist students to understand the faculty rules and regulations."}
-            ]
+            {"role": "system", 
+            "content": "you are an Assistant in faculty of Computers and data science,"
+            "you Assist students to understand the faculty rules and regulations."
+            "don't make up answers, it's important to use tools every question to get information."}
+        ]
 interrupt_flag = False
 
 def save_conversation():
@@ -241,10 +242,11 @@ def new_conversation():
     global current_conversation_id, chat_messages
     current_conversation_id = str(uuid.uuid4())
     chat_messages = [
-                {"role": "system",
-                "content": "you are consultant in faculty of Computers and data science,"
-                " your job is to Assist students to understand the faculty rules and regulations."}
-            ]
+            {"role": "system", 
+            "content": "you are an Assistant in faculty of Computers and data science,"
+            "you Assist students to understand the faculty rules and regulations."
+            "don't make up answers, it's important to use tools every question to get information."}
+        ]
     return jsonify({
         "status": "success", 
         "conversation_id": current_conversation_id,
@@ -260,7 +262,12 @@ def delete_conversation(conversation_id):
             global current_conversation_id, chat_messages
             if current_conversation_id == conversation_id:
                 current_conversation_id = None
-                chat_messages = []
+                chat_messages = [
+                    {"role": "system", 
+                    "content": "you are an Assistant in faculty of Computers and data science,"
+                    "you Assist students to understand the faculty rules and regulations."
+                    "don't make up answers, it's important to use tools every question to get information."}
+                ]
             return jsonify({"status": "success"})
         else:
             return jsonify({"status": "error", "message": "Conversation not found"}), 404
