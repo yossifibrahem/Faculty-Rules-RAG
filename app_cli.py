@@ -179,11 +179,11 @@ Type 'clear' to start new chat"""
 def chat_loop() -> None:
     """Main chat interaction loop."""
     messages: List[Dict] = [
-        {"role": "system", 
-         "content": "you are an Assistant in faculty of Computers and data science,"
-        "your Assist students to understand the faculty rules and regulations."
-        "use tools every question to get information about the faculty."}
-    ]
+            {"role": "system", 
+            "content": "you are an Assistant in faculty of Computers and data science,"
+            "you Assist students to understand the faculty rules and regulations."
+            "don't make up answers, it's important to use tools every question to get information."}
+        ]
     use_streaming = True  # Set to False for non-streaming mode, True for streaming
 
     # Clear screen on startup
@@ -200,7 +200,7 @@ def chat_loop() -> None:
             messages: List[Dict] = [
                 {"role": "system", 
                 "content": "you are an Assistant in faculty of Computers and data science,"
-                "your Assist students to understand the faculty rules and regulations."
+                "you Assist students to understand the faculty rules and regulations."
                 "don't make up answers, it's important to use tools every question to get information."}
             ]
             os.system('cls' if os.name == "nt" else 'clear')
