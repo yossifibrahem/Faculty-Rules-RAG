@@ -542,18 +542,22 @@ A: Symbols (S, U) used in assessing the following mandatory university requireme
 Human Rights and Anti-Corruption.
 Community Service and Environmental Development.
 Those Symbols have no effect on the GPA and means that you passed the courses.
+U means Unsatisfactory and indicates that the student didn’t meet the minimum requirements to pass the course.
+S means Satisfactory and indicates that the student passed the course.
 <split>
 Q: Why do I have S in my GPA?
 A: Symbols (S, U) used in assessing the following mandatory university requirements:
 Human Rights and Anti-Corruption.
 Community Service and Environmental Development.
 Those Symbols have no effect on the GPA and means that you passed the courses.
+S means Satisfactory and indicates that the student passed the course.
 <split>
 Q: Why do I have U in my GPA?
 A: Symbols (S, U) used in assessing the following mandatory university requirements:
 Human Rights and Anti-Corruption.
 Community Service and Environmental Development.
 Those Symbols have no effect on the GPA and means that you passed the courses.
+U means Unsatisfactory and indicates that the student didn’t meet the minimum requirements to pass the course.
 <split>
 Q: What range is A in the GPA?
 A: the range for each grades:

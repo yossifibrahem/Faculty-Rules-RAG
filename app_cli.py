@@ -20,10 +20,13 @@ from tool_managment import RAG
 from tool_managment import FAQ
 from tool_managment import links
 
+BASE_URL = input("Enter the base URL of the API: ")
+API_KEY = input("Enter the API key: ")
+
 # Constants
 MODEL = "qwen2.5-7b-instruct"
-BASE_URL = "http://127.0.0.1:1234/v1"
-API_KEY = "dummy_key"
+BASE_URL = "http://127.0.0.1:1234/v1" if BASE_URL == "" else BASE_URL
+API_KEY = "dummy_key" if API_KEY == "" else API_KEY
 
 # Initialize OpenAI client
 client = OpenAI(base_url=BASE_URL, api_key=API_KEY)
@@ -215,12 +218,12 @@ Type 'clear' to start new chat
 def chat_loop() -> None:
     """Main chat interaction loop."""
     messages: List[Dict] = [
-        {"role": "system", 
-        "content": "you are an Assistant in faculty of Computers and data science,"
-        "you Assist students."
-        "don't make up answers, it's important to use FAQ tool every question to get information."}
-    ]
-    use_streaming = True  # Set to False for non-streaming mode, True for streaming
+            {"role": "system", 
+            "content": "you are an Assistant in faculty of Computers and data science,"
+            "you Assist students."
+            "don't make up answers, it's important to use tools every question to get information."}
+        ]
+    use_streaming = False  # Set to False for non-streaming mode, True for streaming
 
     # Clear screen on startup
     os.system('cls' if os.name == "nt" else 'clear')
@@ -240,7 +243,7 @@ def chat_loop() -> None:
                 {"role": "system", 
                 "content": "you are an Assistant in faculty of Computers and data science,"
                 "you Assist students."
-                "don't make up answers, it's important to use FAQ tool for questions and RAG for information."}
+                "don't make up answers, it's important to use tools every question to get information."}
             ]
             os.system('cls' if os.name == "nt" else 'clear')
             display_welcome_banner()
@@ -293,16 +296,16 @@ def chat_loop() -> None:
                     if tool_name == "RAG":
                         print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
                         results = RAG(arguments["query"], 1)
-                        for i,result in enumerate(results):
-                            print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
-                            print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
+                        # for i,result in enumerate(results):
+                        #     print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
+                        #     print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
 
                     elif tool_name == "FAQ":
                         print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
                         results = FAQ(arguments["query"], arguments.get("top_k", 1))
-                        for i,result in enumerate(results):
-                            print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
-                            print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
+                        # for i,result in enumerate(results):
+                        #     print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
+                        #     print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
 
                     elif tool_name == "links":
                         results = links()

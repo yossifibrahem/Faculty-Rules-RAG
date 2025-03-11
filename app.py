@@ -81,7 +81,7 @@ current_conversation_id = None
 chat_messages = [
             {"role": "system", 
             "content": "you are an Assistant in faculty of Computers and data science,"
-            "you Assist students to understand the faculty rules and regulations."
+            "you Assist students."
             "don't make up answers, it's important to use tools every question to get information."}
         ]
 interrupt_flag = False
@@ -296,7 +296,7 @@ def delete_conversation(conversation_id):
                     {"role": "system", 
                     "content": "you are an Assistant in faculty of Computers and data science,"
                     "you Assist students."
-                    "don't make up answers, it's important to use FAQ tool every question to get information."}
+                    "don't make up answers, it's important to use tools every question to get information."}
                 ]
             return jsonify({"status": "success"})
         else:
