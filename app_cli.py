@@ -20,7 +20,7 @@ BOLD = '\033[1m'
 from SearchRules import search_rules as search_info
 
 # Constants
-MODEL = "qwen2.5-3b-instruct"
+MODEL = "qwen2.5-7b-instruct"
 BASE_URL = "http://127.0.0.1:1234/v1"
 API_KEY = "dummy_key"
 
@@ -203,7 +203,7 @@ def chat_loop() -> None:
     show_help()
 
     while True:
-        print(f"\n{Fore.CYAN}>{Style.RESET_ALL} ", end="")
+        print(f"\n{Fore.CYAN}You:{Style.RESET_ALL} ", end="")
         user_input = input().strip()
 
         if not user_input:
@@ -269,7 +269,7 @@ def chat_loop() -> None:
 
                     if tool_name == "search_info":
                         print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
-                        results = search_info(arguments["query"], 2)
+                        results = search_info(arguments["query"], 3)
                         for i,result in enumerate(results):
                             print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
                     
