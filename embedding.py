@@ -48,19 +48,11 @@ class TextSplitter:
         return [part for part in parts if part]
 
 class VectorDB:
-    _instance = None
-    
-    def __new__(cls, embedding_client: Optional[EmbeddingClient] = None):
-        if cls._instance is None:
-            cls._instance = super(VectorDB, cls).__new__(cls)
-            cls._instance.embedding_client = embedding_client or EmbeddingClient()
-            cls._instance.vectors = []
-            cls._instance.texts = []
-        return cls._instance
-
-    def __init__(self, embedding_client: Optional[EmbeddingClient] = None):
-        # Skip initialization if already initialized
-        pass
+    def __init__(self, name: str, embedding_client: Optional[EmbeddingClient] = None):
+        self.name = name
+        self.embedding_client = embedding_client or EmbeddingClient()
+        self.vectors = []
+        self.texts = []
 
     def add_texts(self, texts: List[str]) -> None:
         """Add multiple texts to the database in batch."""
@@ -105,20 +97,13 @@ class VectorDB:
             pickle.dump((self.vectors, self.texts), f)
 
     @classmethod
-    def load(cls, file_path: str, embedding_client: Optional[EmbeddingClient] = None) -> 'VectorDB':
+    def load(cls, file_path: str, name: str, embedding_client: Optional[EmbeddingClient] = None) -> 'VectorDB':
         """Load a database from a file."""
         import pickle
-        db = cls(embedding_client)
+        db = cls(name=name, embedding_client=embedding_client)
         with open(file_path, 'rb') as f:
             db.vectors, db.texts = pickle.load(f)
         return db
-
-    @classmethod
-    def get_instance(cls) -> 'VectorDB':
-        """Get the singleton instance of VectorDB."""
-        if cls._instance is None:
-            cls._instance = cls()
-        return cls._instance
 
 
 

@@ -392,7 +392,7 @@
         function createLoadingIndicator(tool_info) {
             const div = document.createElement('div');
             div.className = 'tool-loading';
-            if (tool_info.name === 'search_info') {
+            if (tool_info.name === 'RAG' || tool_info.name === 'FAQ') {
                 div.innerHTML = `
                     <div class="spinner"></div>
                     <span>Searching for ${tool_info.args.query}</span>
@@ -412,16 +412,24 @@
             };
 
             const generators = {
-                search_info: () => ({
+                RAG: () => ({
                     title: args.query, icon: '📄',
                     content: Array.isArray(data) ? 
                         `<div class="space-y-4">${data.map(r => 
-                            `<div>similarity ${r.similarity} 
-                            <div class="text-sm text-gray-300 bg-gray-800 p-3 rounded-lg">${r.content}</div></div>`
+                            `<div class="text-sm text-gray-300 bg-gray-800 p-3 rounded-lg">${r.content}</div>`
                         ).join('')}</div>` : 
                         `<div class="text-sm text-gray-300 bg-gray-800 p-3 rounded-lg">${data}</div>`,
                     className: 'bg-gray-900'
                 }),
+                FAQ: () => ({
+                    title: args.query, icon: '❔',
+                    content: Array.isArray(data) ?
+                        `<div class="space-y-4">${data.map(r =>
+                            `<div class="text-sm text-gray-300 bg-gray-800 p-3 rounded-lg">${r.content}</div>`
+                        ).join('')}</div>` :
+                        `<div class="text-sm text-gray-300 bg-gray-800 p-3 rounded-lg">${data}</div>`,
+                    className: 'bg-gray-900'
+                })
             };
 
             const { title, icon, content } = (generators[name] || (() => ({

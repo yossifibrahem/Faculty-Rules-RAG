@@ -7,7 +7,9 @@ from openai import OpenAI
 import time
 
 # Local imports
-from SearchRules import search_rules as search_info
+from tool_managment import RAG
+from tool_managment import FAQ
+from tool_managment import links
 
 
 app = Flask(__name__)
@@ -32,19 +34,42 @@ def home():
 Tools = [{
     "type": "function",
     "function": {
-        "name": "search_info",
+        "name": "RAG",
         "description": (
-            "Use this every time the stuedent asks a question that require looking for."
-            "This tool searches the faculty rules and regulations for the given query."
-            "The tool returns the relevant information found in the rules."
+            "This tool Retrieve a snipped article from faculty rules and regulations based on the query."
         ),
         "parameters": {
             "type": "object",
             "properties": {
-                "query": {"type": "string", "description": "describe what the user is looking for in details."}
+                "query": {"type": "string", "description": "general query to search for"}
             },
             "required": ["query"]
         }
+    }
+}, {
+    "type": "function",
+    "function": {
+        "name": "FAQ",
+        "description": (
+            "This tool Retrieve a relevent frequently asked questions and answers based on the query."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {"type": "string", "description": "general query to search for"},
+                "top_k": {"type": "integer", "description": "number of results to return"}
+            },
+            "required": ["query"]
+        }
+    }
+}, {
+    "type": "function",
+    "function": {
+        "name": "links",
+        "description": (
+            "This tool provides links to useful resources."
+            "use it if the student asks for a link to a specific resource."
+        ),
     }
 }]
 
@@ -201,8 +226,14 @@ def chat():
 
                         yield f"data: {json.dumps({'type': 'tool-start', 'name': tool_name, 'args': arguments})}\n\n"
                         
-                        if tool_name == "search_info":
-                            result = search_info(arguments["query"], 3)
+                        if tool_name == "RAG":
+                            result = RAG(arguments["query"], 3)
+
+                        elif tool_name == "FAQ":
+                            result = FAQ(arguments["query"], arguments.get("top_k", 1))
+
+                        elif tool_name == "links":
+                            result = links()
                             
                         chat_messages.append({
                                     "role": "tool",
@@ -241,11 +272,11 @@ def new_conversation():
     global current_conversation_id, chat_messages
     current_conversation_id = str(uuid.uuid4())
     chat_messages = [
-            {"role": "system", 
-            "content": "you are an Assistant in faculty of Computers and data science,"
-            "you Assist students to understand the faculty rules and regulations."
-            "don't make up answers, it's important to use tools every question to get information."}
-        ]
+        {"role": "system", 
+        "content": "you are an Assistant in faculty of Computers and data science,"
+        "you Assist students."
+        "don't make up answers, it's important to use FAQ tool every question to get information."}
+    ]
     return jsonify({
         "status": "success", 
         "conversation_id": current_conversation_id,
@@ -264,8 +295,8 @@ def delete_conversation(conversation_id):
                 chat_messages = [
                     {"role": "system", 
                     "content": "you are an Assistant in faculty of Computers and data science,"
-                    "you Assist students to understand the faculty rules and regulations."
-                    "don't make up answers, it's important to use tools every question to get information."}
+                    "you Assist students."
+                    "don't make up answers, it's important to use FAQ tool every question to get information."}
                 ]
             return jsonify({"status": "success"})
         else:

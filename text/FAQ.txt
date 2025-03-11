@@ -970,3 +970,38 @@ A: A: A student's result in each course is estimated using the following grading
 | F            | 0      | Less than 50% of the total grade    |
 | (F)          | 0      | Less than 30% of the written exam grade |
 | Abs          | 0      | Absent from the written exam without a valid excuse |
+
+<split>
+Q: what is the Official website for Alexandria University?
+A: the Official website for Alexandria University is [Alexandria University](https://alexu.edu.eg/index.php/en/)
+<split>
+Q: what is the Official website for college?
+A: you can visite the official website [Home](https://fcds.alexu.edu.eg/index.php/en/)
+<split>
+Q: what are the required papers to apply for the faculty?
+A: Required documents for application:
+- Original high school certificate + 3 photocopies of high school certificate.
+- Nomination card.
+- Original water birth certificate + 3 photocopies of water birth certificate.
+- 3 copies of the national ID card.
+- 6 personal photos of the student.
+- Certificate of 2 soldiers or 6 soldiers for male students from the police department affiliated with the place of residence.
+- Medical examination request.
+- Application for enrollment.
+- Receipts for payment of expenses, where payment is made by visa and not in cash.
+
+<split>
+Q: Who is the headmaster of the college?
+A: the Dean Faculty of Computer and Data Science. is Dr. Magda Madbouly.
+<split>
+Q: Where can I find the course reasources?
+A: students uploades the course reasources on a google drive (https://drive.google.com/drive/folders/18IqwQ9pL0i2H4sqwoywP6_Hd_wz7_BKu)
+<split>
+Q: where is the course content?
+A: The courses content is available at (https://drive.google.com/drive/folders/18IqwQ9pL0i2H4sqwoywP6_Hd_wz7_BKu)
+<split>
+Q: I can't find the course materials?
+A: The courses materials is available at (https://drive.google.com/drive/folders/18IqwQ9pL0i2H4sqwoywP6_Hd_wz7_BKu)
+<split>
+Q: how to register for courses?
+A: using the college site (https://gs.alexu.edu.eg/FCDS/index.php)

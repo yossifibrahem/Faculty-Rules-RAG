@@ -6,7 +6,6 @@ This module provides a chat interface with various tool-calling capabilities.
 import json
 import os
 import shutil
-from datetime import datetime
 from typing import List, Dict, Tuple, Any
 from textwrap import fill
 
@@ -17,7 +16,9 @@ CUSTOM_ORANGE = '\x1b[38;5;216m'
 BOLD = '\033[1m'
 
 # tool imports
-from SearchRules import search_rules as search_info
+from tool_managment import RAG
+from tool_managment import FAQ
+from tool_managment import links
 
 # Constants
 MODEL = "qwen2.5-7b-instruct"
@@ -34,18 +35,42 @@ init()
 Tools = [{
     "type": "function",
     "function": {
-        "name": "search_info",
+        "name": "RAG",
         "description": (
-            "This tool Retrieve a snipped article from faculty rules and regulations"
-            "it searches for the most relevant information based on the user's query."
+            "This tool Retrieve a snipped article from faculty rules and regulations based on the query."
         ),
         "parameters": {
             "type": "object",
             "properties": {
-                "query": {"type": "string", "description": "describe what the user is looking for in details."}
+                "query": {"type": "string", "description": "general query to search for"}
             },
             "required": ["query"]
         }
+    }
+}, {
+    "type": "function",
+    "function": {
+        "name": "FAQ",
+        "description": (
+            "This tool Retrieve a relevent frequently asked questions and answers based on the query."
+        ),
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "query": {"type": "string", "description": "general query to search for"},
+                "top_k": {"type": "integer", "description": "number of results to return"}
+            },
+            "required": ["query"]
+        }
+    }
+}, {
+    "type": "function",
+    "function": {
+        "name": "links",
+        "description": (
+            "This tool provides links to useful resources."
+            "use it if the student asks for a link to a specific resource."
+        ),
     }
 }]
 
@@ -192,8 +217,8 @@ def chat_loop() -> None:
     messages: List[Dict] = [
         {"role": "system", 
         "content": "you are an Assistant in faculty of Computers and data science,"
-        "you Assist students to understand the faculty rules and regulations."
-        "don't make up answers, it's important to use tools every question to get information."}
+        "you Assist students."
+        "don't make up answers, it's important to use FAQ tool every question to get information."}
     ]
     use_streaming = True  # Set to False for non-streaming mode, True for streaming
 
@@ -212,12 +237,10 @@ def chat_loop() -> None:
         # Handle commands
         if user_input.lower() == "clear":
             messages = [
-                {
-                "role": "system", 
+                {"role": "system", 
                 "content": "you are an Assistant in faculty of Computers and data science,"
-                "you Assist students to understand the faculty rules and regulations."
-                "don't make up answers, it's important to use tools every question to get information."
-                }
+                "you Assist students."
+                "don't make up answers, it's important to use FAQ tool for questions and RAG for information."}
             ]
             os.system('cls' if os.name == "nt" else 'clear')
             display_welcome_banner()
@@ -267,15 +290,26 @@ def chat_loop() -> None:
                     arguments = json.loads(tool_call["function"]["arguments"])
                     tool_name = tool_call["function"]["name"]
 
-                    if tool_name == "search_info":
+                    if tool_name == "RAG":
                         print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
-                        results = search_info(arguments["query"], 3)
+                        results = RAG(arguments["query"], 1)
                         for i,result in enumerate(results):
                             print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
+                            print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
+
+                    elif tool_name == "FAQ":
+                        print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
+                        results = FAQ(arguments["query"], arguments.get("top_k", 1))
+                        for i,result in enumerate(results):
+                            print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
+                            print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
+
+                    elif tool_name == "links":
+                        results = links()
                     
                     messages.append({
                             "role": "tool",
-                            "content": str(result),
+                            "content": str(results),
                             "tool_call_id": tool_call["id"]
                         })
                     print(f"{Fore.GREEN}✓ Complete{Style.RESET_ALL}")

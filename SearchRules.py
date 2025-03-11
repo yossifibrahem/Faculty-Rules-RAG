@@ -1,36 +1,38 @@
-from embedding import TextSplitter, VectorDB
+from embedding import TextSplitter
+from database_manager import DatabaseManager
 import os
-from typing import List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional
+from embedding import VectorDB
 
 # Constants
 RULES_DB_PATH = 'rules_db.pkl'
 RULES_FILE_PATH = 'rules.txt'
+DEFAULT_DB_NAME = 'rules'
 
-def initialize_rules_db() -> None:
+def initialize_rules_db(rules_file_path: str, db_path: str, db_name: str = DEFAULT_DB_NAME) -> None:
     """Initialize or load the rules database."""
-    db = VectorDB.get_instance()
+    manager = DatabaseManager.get_instance()
     
     try:
-        if os.path.exists(RULES_DB_PATH):
-            VectorDB.load(RULES_DB_PATH)
+        if os.path.exists(db_path):
+            db = VectorDB.load(db_path, name=db_name)
+            manager.databases[db_name] = db
         else:
-            if not os.path.exists(RULES_FILE_PATH):
-                raise FileNotFoundError(f"File not found: {RULES_FILE_PATH}")
-            
-            rules = load_rules(RULES_FILE_PATH)
+            db = manager.create_database(db_name)
+            rules = load_rules(rules_file_path)
             db.add_texts(rules)
-            db.save(RULES_DB_PATH)
+            db.save(db_path)
     except Exception as e:
         print(f"Warning: Failed to initialize rules database: {str(e)}")
 
-def search_rules(query: str, top_k: int = 3) -> List[Tuple[str, float]]:
+def search_rules(query: str, db_name: str = DEFAULT_DB_NAME, top_k: int = 3) -> List[Dict[str, any]]:
     """
     Search rules database with the given query.
     Returns list of (rule_text, similarity_score) tuples.
     """
-    db = VectorDB.get_instance()
+    manager = DatabaseManager.get_instance()
     try:
-        return db.search(query, top_k)
+        return manager.search_database(db_name, query, top_k)
     except Exception as e:
         print(f"Warning: Rules search failed: {str(e)}")
         return []
@@ -45,5 +47,9 @@ def load_rules(file_path: str) -> List[str]:
         print(f"Warning: Failed to load data: {str(e)}")
         return []
 
-# Initialize database when module is imported
-initialize_rules_db()
+# Example usage
+manager = DatabaseManager.get_instance()
+
+# Create and initialize different databases
+initialize_rules_db('text\\rules.txt', 'vector_db\\rules_db.pkl', 'rules')
+initialize_rules_db('text\\FAQ.txt', 'vector_db\\FAQ_db.pkl', 'FAQ')
