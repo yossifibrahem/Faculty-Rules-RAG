@@ -1,7 +1,7 @@
 Chapter One
 Introduction
 
-A. About the College
+A. Information about the College or the Faculty
 
 Interest in data science has recently increased significantly by companies on the one hand, and individuals wishing to learn this field on the other hand. Data science has become a science that is dominated by interdisciplinary overlap, which is based on the use of scientific methods, processors, algorithms and theorizing to extract knowledge and ideas from data in its form, whether unstructured or unstructured.
 
@@ -19,7 +19,9 @@ C. College Mission
 
 Preparing specialized and distinguished cadres and qualifying competencies that compete academically and professionally in the fields of computers and data sciences by offering distinguished educational programs in accordance with national and international standards for the quality of education, which contributes to building a knowledge economy, solving the technical and information problems of society, and preparing graduates capable of enabling various sectors of the labor market to invest in modern technology and information technologies to serve society.
 
-Vision:
+<split>
+
+college Vision:
 
 Creativity and Excellence
 Quality and Excellence
@@ -28,6 +30,8 @@ Belonging and Commitment
 Freedom of Thought
 Justice and Equal Opportunities
 Integrity and Transparency
+
+<split>
 
 College Mission:
 
@@ -62,7 +66,7 @@ At the request of the Faculty Council, the Alexandria University Council grants 
 
 <split>
 
-Article 2 Academic Systems of the College:
+Article 2 Academic Systems of the College (the available programs):
 
 The College of Computers and Data Sciences consists of two academic departments:
 
@@ -105,7 +109,7 @@ Study in the Bachelor's Program in Computer Science and Data Science is based on
 
 <split>
 
-Article 6: Credit Hour:
+Article 6: Credit Hour (what is the GPA system):
 
 It is a unit of measurement to determine the weight of each course in the main semester, and it is equivalent to:
 
@@ -125,7 +129,7 @@ English is the official language of study in the college, and some courses may b
 
 <split>
 
-Article 8 Requirements for Obtaining the Academic Degree:
+Article 8: Requirements for Obtaining the Academic Degree:
 
 Obtaining a Bachelor's degree in Computer Science and Data Sciences according to the credit hour system requires passing
 
@@ -227,7 +231,7 @@ D. The maximum number of credit hours that a student is allowed to register for 
 
 <split>
 
-Article 11: Study Levels:
+Article 11: Study Levels (credit hours distripution per semester):
 
 Students are classified during their studies into four study levels according to the number of credit hours passed as follows:
 
@@ -378,7 +382,7 @@ The College Council may take the necessary decisions to complete and implement t
 
 <split>
 
-Article 28: Basic competencies of academic programs:
+Article 28: Basic competencies of academic programs (Information about each program):
 
 The College of Computer Science and Data Science adopts the competency-based learning methodology. Based on the competencies required of graduates in the labor market, the various academic programs of the college include competencies included in the National Skills Framework in the field of communications and information, which was approved by the Ministry of Communications and Information Technology, in addition to other reference competencies approved by international programs in similar specializations. Some competencies were selected based on the labor market's need for them at the national level and at the labor market level in the Middle East and even in the world, as Egyptian educational institutions provide a large group of highly qualified workers in the field of communications and information for countries in the region and globally. Accordingly, the selection of academic programs is based on a realistic and studied need.
 
@@ -437,7 +441,7 @@ Predicting regional and international developments, and identifying the opportun
 
 <split>
 
-Article 29: Design of academic programs:
+Article 29: Design of academic programs (GPA credit hours distribution):
 
 All academic programs of the College of Computer Science and Data Sciences include the requirements of the university, college, and program, where the student studies 140 credit hours divided as shown in the following:
 **University Requirements**
@@ -469,7 +473,7 @@ Each student in any of the college’s academic programs must study 4 elective c
 Chapter Five
 Scientific Content of Curricula for Different Programs
 
-Article 44 Scientific Content of Compulsory College Courses
+Article 44 Scientific Content of Compulsory College Courses (list and description of courses)
 
 02-24-00101 - Linear Algebra (3 Cr; 2 L, 1 P): Systems of linear equations, Matrices, Determinants, Euclidean spaces, Linear combinations and linear span, Subspaces, Linear independence, Basis and dimension, Rank of a matrix, Inner products, Eigen values and Eigen vectors.
 Pre-requisite(s): none. 

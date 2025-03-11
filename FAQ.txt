@@ -1,0 +1,972 @@
+Q: Who are you?
+A: I’m an AI developed by Alexandria university designed to help students with their academic related questions.
+<split>
+Q: Why has interest in data science increased recently?  
+A: Interest in data science has grown due to its appeal to both companies and individuals. Data science is valued for its interdisciplinary nature, using scientific methods, algorithms, and theories to extract knowledge from both structured and unstructured data.
+<split>
+Q: How much data currently available was created in the past two years?  
+A: According to recent reports, 90% of today's data was created in the last two years.
+<split>
+Q: Why is data science considered a rapidly growing field?  
+A: Data science is increasingly in demand as major global companies need to analyze and handle large and continuously growing data sets.
+<split>
+Q: When did Alexandria University decide to establish the Faculty of Computers and Data Sciences?  
+A: Alexandria University established the Faculty of Computers and Data Sciences on March 23, 2019.
+<split>
+Q: What are the objectives of the Faculty of Computers and Data Sciences at Alexandria University?
+A:  The Faculty of Computers and Data Sciences at Alexandria University aims to keep pace with technological advances, serve the labor market, build a digital society, improve information infrastructure, and foster skills in learning, research, and innovation.
+<split>
+Q: How long is the undergraduate program at the Faculty of Computers and Data Sciences?  
+A: The undergraduate program at the Faculty of Computers and Data Sciences spans four academic years, divided into eight semesters of fifteen weeks each, based on the credit hour system.
+<split>
+Q: What specializations does the preparatory year at the college include?  
+A: The preparatory year offers programs in computing, data science, business analytics, intelligent systems, media analysis, health analytics and informatics, and cybersecurity.
+<split>
+Q: What goals do the college's work teams aim to achieve?  
+A: The college's teams aim to meet educational objectives, support the business environment and Egyptian society, and develop new programs to fulfill market requirements.
+<split>
+Q: What is the vision of the college?  
+A: The college aims to provide distinguished education and scientific research in computers and data sciences by offering modern academic programs that meet national and international quality standards. It emphasizes advanced learning methods to produce highly competitive specialists in these fields.
+<split>
+Q: What is the mission of the college?  
+A: The mission is to prepare specialized, highly competent professionals in computers and data sciences who are competitive academically and professionally. This involves providing educational programs that align with quality standards to help build a knowledge economy, solve societal technical and information problems, and equip graduates to support various sectors in utilizing modern technology.
+<split>
+Q: What core values define the college's vision?  
+A: The core values include:
+- Creativity and Excellence
+- Quality and Excellence
+- Teamwork and Team Spirit
+- Belonging and Commitment
+- Freedom of Thought
+- Justice and Equal Opportunities
+- Integrity and Transparency
+<split>
+Q: What are some specific objectives of the college's mission?  
+A: The college's mission objectives include:
+1. Keeping pace with global academic developments in computers and data sciences.
+2. Enhancing learners' knowledge and practical skills in their specializations.
+3. Preparing graduates with competitive cognitive skills to serve the community.
+4. Ensuring program coherence with the latest scientific and technical advancements.
+5. Integrating computer science and information technology programs.
+6. Providing consultations and training in computers and data sciences to benefit the community.
+7. Promoting scientific research among students and faculty to support sustainable development.
+8. Expanding opportunities for practical and laboratory training aligned with job requirements in state institutions.
+<split>
+Q: What academic degree is granted to graduates of the Faculty of Computers and Data Sciences at Alexandria University?  
+A: At the request of the Faculty Council, the Alexandria University Council grants a Bachelor's degree in Computer Science and Data Science.
+<split>
+Q: What programs are available for the Bachelor's degree in Computer Science and Data Science?  
+A: The programs are divided into:
+(1) General Program:
+-Computing and Data Science.
+(2) Specialized Programs: 
+-Business Analytics 
+-Intelligent Systems 
+-Media Analytics 
+-Healthcare Informatics and Data Analytics
+-Cybersecurity.
+<split>
+Q: What are the two academic departments within the College of Computers and Data Sciences?  
+A: The two academic departments within the College of Computers and Data Sciences are:
+1. Computing and Information Systems
+2. Data Sciences and Analytics
+<split>
+Q: What are the general conditions for admission to the College of Computers and Data Sciences?  
+A: Alexandria University follows the admission system for Egyptian public universities. International students from all countries may be admitted with approval from the General Administration of Incoming Students and relevant authorities in their home country, and after passing the admission tests set by the College Council.
+<split>
+Q: How is the course code structured in the College of Computers and Data Sciences?  
+A: Each course code in the program consists of nine numbers divided into five parts, where each part has a specific meaning. For example, in the course code `02-24-05401-04-01` for the "E-health, Telehealth and Telemedicine" course:
+- University Code: 2
+- Faculty Code: 23
+- Program Code: 5
+- Academic Level: 4
+- Course Order within Level: 1
+- Alexandria University Code: 2
+<split>
+Q: What does the program code indicate in the course numbering system?  
+A: The program code (e.g., "5" in the example) identifies the specific program within the faculty to which the course belongs.
+<split>
+Q: What study system is used in the Bachelor's Program in Computer Science and Data Science?  
+A: The program follows the credit hour system and is divided into two main semesters (fall and spring), each lasting fifteen weeks. A summer semester may also be offered for eight weeks, with course hours doubled weekly.
+<split>
+Q: What is a credit hour, and how is it defined?  
+A: A credit hour measures the weight of each course per main semester. It is equivalent to:
+- One theoretical hour per week,
+- Two hours of exercises or practical lessons per week,
+- Three hours of practical training per week, or
+- Four hours of field training per week.
+<split>
+Q: What is the official language of study in college?  
+A: English is the official language of study, though some courses may be taught in Arabic with approval from the college and university councils.
+<split>
+Q: What are the requirements for obtaining a Bachelor's degree in Computer Science and Data Sciences?  
+A: To obtain the degree, a student must complete at least 140 credit hours, covering university, college, and program requirements, over a minimum of 7 semesters. The cumulative GPA upon graduation must be at least 2.00.
+<split>
+Q: How many credit hours are required for university requirements, and what are they?  
+A: University requirements consist of 10 credit hours, divided into:
+- Mandatory Requirements (4 credit hours):
+  - Critical Thinking (2 credit hours)
+  - Innovation and Entrepreneurship (2 credit hours)
+  - Human Rights and Anti-Corruption
+  - Community Service and Environmental Development
+  - Military Education (required for graduation but not counted in total credit hours)
+- Elective Requirements (6 credit hours): Three 2-credit courses chosen from a university-approved list to enhance the student's thinking and culture, excluding courses offered by their college.
+<split>
+Q: What are the college requirements for the Bachelor's program?  
+A: The college requirements total 60 credit hours, divided into:
+- Compulsory Courses: 48 credit hours
+- Elective Courses: 12 credit hours
+<split>
+Q: What are the program-specific requirements for the Bachelor's degree?  
+A: Program requirements amount to 70 credit hours, which include:
+- Compulsory Courses: 58 credit hours (including 4 credit hours of field training)
+- Elective Courses: 12 credit hours
+<split>
+Q: What grading scale is used to evaluate a student's performance in each course?  
+A: A student's result in each course is estimated using the following grading scale:
+
+| Letter Grade | Points | Percentage Range                     |
+|--|--|--|
+| A            | 4      | 90% and above                        |
+| A-           | 3.666  | 85% to less than 90%                |
+| B+           | 3.333  | 80% to less than 85%                |
+| B            | 3      | 75% to less than 80%                |
+| B-           | 2.666  | 70% to less than 75%                |
+| C+           | 2.333  | 65% to less than 70%                |
+| C            | 2      | 60% to less than 65%                |
+| C-           | 1.666  | 56% to less than 60%                |
+| D+           | 1.333  | 53% to less than 56%                |
+| D            | 1      | 50% to less than 53%                |
+| F            | 0      | Less than 50% of the total grade    |
+| (F)          | 0      | Less than 30% of the written exam grade |
+| Abs          | 0      | Absent from the written exam without a valid excuse |
+<split>
+Q: What does a grade of "F" signify in terms of performance?  
+A: A grade of "F" indicates that the student scored less than 50% of the total grade, while an "(F)" specifically indicates a score below 30% on the written exam.
+<split>
+Q: What does an "Abs" grade mean?  
+A: An "Abs" grade means the student was absent from the written exam without a valid excuse.
+<split>
+Q: What symbols are used in the credit hour system that do not count towards points, and what do they mean?  
+A: The following symbols are used in the credit hour system, which do not contribute to the point calculation:
+
+| Symbol | Meaning                                         |
+|--|-|
+| W      | Withdrawn from course                           |
+| FW     | Forced withdrawal from course                   |
+| MW     | Withdrawn for military service                  |
+| I      | Course incomplete (incomplete course)          |
+| IP     | Extended grade reported in the first semester for a two-semester course |
+| S      | Satisfactory                                   |
+| U      | Unsatisfactory                                 |
+| AU     | Audit                                          |
+<split>
+Q: In which mandatory university requirements are the symbols "S" and "U" used for assessment?  
+A: The symbols "S" (Satisfactory) and "U" (Unsatisfactory) are used to assess the following mandatory university requirements:
+- Human Rights and Anti-Corruption
+- Community Service and Environmental Development
+<split>
+Q: How is the Semester Grade Point Average (GPA) calculated?  
+A: The Semester GPA is calculated using the formula:  
+Semester GPA = (Σ(Points for each course × Credit Hours for each course)) / Σ(Credit Hours for all courses))
+<split>
+Q: How is the overall cumulative grade point average (CGPA) calculated?  
+A: The overall CGPA is calculated using the formula:  
+Overall CGPA = (Σ(Points of each course × Credit Hours of each course)) / Σ(Total Credit Hours for all courses))
+<split>
+Q: How are the results of the semester GPA and overall CGPA rounded?  
+A: The results for both the semester GPA and overall CGPA are rounded to four decimal places.
+<split>
+Q: What is the minimum number of credit hours a student can register for in the fall and spring semesters?  
+A: The minimum number of credit hours a student is allowed to register for in the fall and spring semesters is 12 credit hours, unless they are graduating and have received approval from the Education and Student Affairs Committee and the College Council.
+<split>
+Q: What is the maximum number of credit hours a student can register for in the fall and spring semesters?  
+A: The maximum number of credit hours a student can register for in the fall and spring semesters is 19 credit hours. This limit can be increased to 21 credit hours for students with a general cumulative average of at least 3.333 or for students graduating in their final academic level without failing grades.
+<split>
+Q: What is the credit hour limit for students who have failed courses?  
+A: Students with a failure are not allowed to register for more than 12 credit hours in the fall and spring semesters.
+<split>
+Q: What is the maximum number of credit hours a student can register for in the summer semester?  
+A: The maximum number of credit hours a student can register for in the summer semester is 9 credit hours.
+<split>
+Q: How are students classified into study levels based on credit hours completed?  
+A: Students are classified into four study levels according to the number of credit hours passed:
+- First Level: 0 to 28 credit hours
+- Second Level: 29 to 64 credit hours
+- Third Level: 65 to 98 credit hours
+- Fourth Level: 99 to 140 credit hours
+<split>
+Q: What is the role of an academic advisor in college?  
+A: An academic advisor is appointed by the College's Education and Student Affairs Council to help students understand their study plan, monitor its implementation, and select compulsory and elective courses. The advisor's recommendations are advisory and non-binding, and course registration requires their approval regarding the student's study load.
+<split>
+Q: When does course registration begin, and who determines the offered courses?  
+A: The college determines the compulsory and elective courses it will offer at least one month before the semester begins, and registration starts at least one week prior to the beginning of each semester.
+<split>
+Q: Is late registration allowed, and under what conditions?  
+A: Yes, the college council may allow late registration during the second week for students who failed to register on time, provided they have an accepted excuse from the Education and Student Affairs Committee.
+<split>
+Q: What are the prerequisites for course registration?  
+A: A student is not allowed to register for any course that requires a prerequisite unless they have successfully passed that prerequisite. The college council may establish necessary controls for this.
+<split>
+Q: What is the procedure for adding or deleting courses?  
+A: Students have the right to delete or add any course from the beginning of the second week until the end of the third week of the main semester, or until the end of the first week of the summer semester. This requires completing a deletion and addition form and obtaining approval from the academic advisor, without the deleted course appearing on the student's academic record. However, this must not affect the student's academic load.
+<split>
+Q: When can a student withdraw from a course, and what is recorded on their academic record?  
+A: A student can withdraw from a course starting from the fourth week until the end of the twelfth week of the main semester and during the sixth week of the summer semester. This requires completing a withdrawal form and obtaining approval from the academic advisor. If the withdrawal is processed, a "Withdrawal" (W) grade will be recorded, provided the student has not exceeded the specified absence rate before the withdrawal.
+<split>
+Q: What happens to withdrawal requests submitted after the specified dates?  
+A: Withdrawal requests submitted after the specified dates will be considered by the College's Education and Student Affairs Committee.
+<split>
+Q: What is the attendance requirement for taking the final exam?  
+A: A student must attend at least 75% of the practical teaching hours of the course to be eligible to take the final exam.
+<split>
+Q: What happens if a student exceeds the absence limits for practical teaching hours?  
+A: A student will receive a warning after missing 15% of the practical teaching hours, followed by a second warning after missing 20%. If the student's absence exceeds 25%, they will be denied the opportunity to take the final exam and will receive a grade of "Forced Withdrawal" (FW), requiring them to repeat the course.
+<split>
+Q: What happens if a student fails to attend the final exam but has a compelling excuse?  
+A: If a student fails to attend the final exam and submits an accepted excuse within two days of the exam date, they may receive a provisional grade of Incomplete (I) in that course, provided they have obtained at least 60% of the semester work grades and have not been denied entry to the final exam.
+<split>
+Q: What are the next steps for a student who receives an Incomplete (I) grade?  
+A: The student will have the opportunity to take the final exam during the first week of the following semester or as determined by the College Council. The total grade for the course will then be the final exam grade plus the grades obtained during the semester.
+<split>
+Q: What occurs if a student fails to complete a course after receiving an Incomplete (I) grade?  
+A: If a student fails to complete the course, they will receive an Abs grade and must re-study that course. Additionally, students may submit applications for an incomplete course for a maximum of three semesters during their study period.
+<split>
+Q: What happens if a student fails to attend the final exam without an accepted excuse?  
+A: The student will receive an Abs grade and must re-study the course.
+<split>
+Q: What are the consequences of receiving an F, Abs, or FW grade in a mandatory course?  
+A: The student must re-study the course. If the course is optional, they have the option to take an alternative course.
+<split>
+Q: What should a student do if they receive an unsatisfactory grade (U) in a graduation requirement?  
+A: The student must re-study that course to fulfill the graduation requirements.
+<split>
+Q: Can a student re-study a course to improve their overall cumulative average (CGPA)?  
+A: Yes, an academically struggling student may re-study a course to improve their CGPA.
+<split>
+Q: How are grades calculated when a student re-studies a course?  
+A: For the first eight attempts at re-studying a course, only the passing grade is counted in the overall cumulative average. For attempts beyond eight, both the failing and passing grades are included in the calculation.
+<split>
+Q: What happens if a student repeatedly fails a course?  
+A: If a student fails a course multiple times, the failure will be counted only once in their overall cumulative average. However, the number of times they took the exam will be recorded, and all points obtained in those attempts will be considered in calculating the overall CGPA.
+<split>
+Q: What constitutes academic probation for a student?  
+A: A student is placed on academic probation if their cumulative GPA falls below 1.666 at the end of the second semester of enrollment or below 2.000 in any subsequent semester.
+<split>
+Q: What are the consequences for a student on academic probation?  
+A: A student on academic probation is warned and is restricted to registering for no more than 12 credit hours in the following semester.
+<split>
+Q: Can a student on academic probation retake courses?  
+A: Yes, a student on academic probation may retake a course to improve their grade, and the highest grade obtained will be used in the GPA calculation.
+<split>
+Q: What happens if a student on academic probation improves their GPA?  
+A: If the student raises their cumulative GPA to 2.000 or above, academic probation will be lifted.
+<split>
+Q: What are the dismissal criteria for students with low GPAs?  
+A: A student will be dismissed from the college if their cumulative GPA is below 2.000 for three consecutive semesters or four separate semesters.
+<split>
+Q: How can a student suspend their enrollment?  
+A: A student can request to suspend enrollment for up to four basic semesters, either separate or connected, for reasons accepted by the College's Education and Student Affairs Committee and approved by the College Council.
+<split>
+Q: What happens if a student does not register for any courses during a semester?  
+A: If a student does not register for any courses during a semester, they are considered to have withdrawn from that semester, which counts as one of the four opportunities to suspend enrollment.
+<split>
+Q: What is the procedure for military service withdrawal?  
+A: A student called to perform military service may withdraw from the study program and will receive a Military Withdrawal (MW) designation. This withdrawal does not count against the four opportunities allowed by law.
+<split>
+Q: Can a student cancel their registration in the program?  
+A: Yes, a student may cancel their registration upon request and can submit a request for re-registration within a maximum of four basic semesters, provided they explain their reasons for both cancellation and re-registration.
+<split>
+Q: What is the process for re-registering after cancellation?  
+A: The re-registration request is presented to the College Council and, if recommended for approval, it is forwarded to the University Council. If approved, the student is treated as a continuing student based on their previous status.
+<split>
+Q: Can a student stop registration after re-registration approval?  
+A: No, the student does not have the right to stop registration after the re-registration is approved.
+<split>
+Q: When can students graduate?  
+A: Students may graduate at the end of the following semesters:
+1. January semester after the fall semester.
+2. June semester after the spring semester.
+3. September semester after the summer semester.
+<split>
+Q: What are the criteria for graduating with honors?  
+A: To graduate with honors, a student must:
+1. Complete graduation requirements within nine basic semesters.
+2. Have a semester GPA of at least 3.333 in any semester.
+3. Have an overall cumulative GPA of at least 3.666.
+4. Not have received a grade of F, (F), FW, or U in any course, nor have been subject to any disciplinary penalties during their studies.
+<split>
+Q: How are honors determined if top graduates have equal CGPA?  
+A: If the overall cumulative GPA of top graduates is equal, the results are rounded to four decimal places, and comparisons are made according to controls set by the College Council and standards approved by the University Council, adhering to all relevant laws and regulations.
+<split>
+Q: Can a student change their study program?  
+A: Yes, a student may change their study program after spending a period in the same college, provided they fulfill the conditions for joining the new program, consult with their academic advisor, and obtain the approval of the Education and Student Affairs Committee and the college council. Previously studied and passed courses may be counted if they meet the requirements of the new program, but remaining courses will not count towards the new program's hours.
+<split>
+Q: What is the Listening System in the college?  
+A: The college council may accept students from the same college or other colleges/universities as listeners for some courses, according to rules set by the college council. Students will receive a certificate of attendance for their participation as listeners.
+<split>
+Q: What are the conditions for student mobility?  
+A: Students may register for courses from outside the college or university or from a foreign university, which will count toward their study program after content equivalency and college council approval. However, these courses cannot exceed 25% of the total hours required for graduation.
+<split>
+Q: What is a visiting student?  
+A: A visiting student is someone from outside the university who studies some courses at the college without obtaining a degree. They must have the approval of the Education and Student Affairs Committee and adhere to college council rules. The maximum registration limit is 12 credit hours in the main semester and 9 credit hours in the summer semester. Visiting students receive a certificate documenting their studies and grades.
+<split>
+Q: What is the Continuous Learning program at the college?  
+A: The College Council may announce the teaching of certain courses or course packages to graduates from the same college or from other colleges/universities, following the rules and regulations established by the College Council with University Council approval.
+<split>
+Q: What are the registration limits for the Continuous Learning program?  
+A: The maximum registration limit for the basic semester is 12 credit hours and 9 credit hours for the summer semester. The applicable articles and provisions from Article 12 to Article 17 will also apply.
+<split>
+Q: What do students receive upon completing the Continuous Learning program?  
+A: At the end of the program, students are granted a certificate for the courses studied and passed, which includes the grades they obtained, in accordance with Article 9 regarding the Evaluation and Grading System.
+<split>
+Q: What authority does the College Council have regarding the implementation of regulations?  
+A: The College Council may make the necessary decisions to complete and implement these regulations and facilitate their procedures.
+<split>
+Q: What methodology does the College of Computer Science and Data Science adopt for its academic programs?  
+A: The college adopts a competency-based learning methodology, focusing on the competencies required of graduates in the labor market.
+<split>
+Q: How are the competencies for the academic programs determined?  
+A: The competencies are based on the National Skills Framework approved by the Ministry of Communications and Information Technology, as well as other reference competencies from international programs in similar specializations. They are selected based on the labor market's needs at national and regional levels.
+<split>
+Q: What is the significance of the selected competencies?  
+A: The competencies are crucial for ensuring that graduates are equipped with the necessary skills and knowledge to meet the demands of the labor market, particularly in the communications and information sector.
+<split>
+Q: How does the college plan to present educational content?  
+A: The college aims to present educational content in innovative ways that center around the student and are linked to industry requirements.
+<split>
+Q: What types of competencies are outlined for each program?  
+A: Each program identifies basic competencies essential for graduates, along with other supporting competencies relevant to the respective field.
+<split>
+Q: What are the key competencies of the Business Application Development Program?  
+A: 1. Analysis and design of business processes.
+2. Creating data collection solutions based on modern technology trends.
+3. Building data warehouses from various data sources.
+4. Using different methods of data analysis to support business decisions.
+5. Localization and management of information systems, including legal aspects for digital transformation.
+6. Data analysis in sectors with high data generation, such as digital marketing and e-government services.
+7. Developing data-driven solutions and products to support new projects.
+<split>
+Q: What competencies does the Smart Systems Program focus on?  
+A: 1. Identifying, analyzing, and evaluating components and fundamentals of smart systems.
+2. Collecting and analyzing information from big data for decision-making.
+3. Designing, building, and testing smart computing systems.
+4. Designing and building embedded systems software and robotics.
+5. Learning to design, create, and manage smart cities.
+6. Supporting and maintaining smart systems for effectiveness and efficiency.
+7. Reviewing and evaluating system performance for usefulness and effectiveness.
+<split>
+Q: What competencies are included in the Media Analytics Program?  
+A: 1. Analyzing media content and anticipating changes in the digital media environment.
+2. Producing digital radio and television programs using multimedia techniques.
+3. Analyzing data for journalistic work using technology.
+4. Enhancing media practices through data and information sciences.
+5. Localizing digitization in various media institutions.
+6. Building observatories for big data analysis on social networks.
+7. Developing public opinion poll mechanisms based on electronic surveys.
+8. Creating media policies based on scientific analyses for media platforms.
+<split>
+Q: What are the main competencies of the Healthcare Analytics and Informatics Program?  
+A: 1. Describing basic concepts in health, medical, and life sciences.
+2. Using data and knowledge in various health fields.
+3. Identifying determinants related to health and evaluating them.
+4. Understanding mechanisms for making clinical and diagnostic decisions.
+5. Promoting information sharing among health care institutions.
+6. Managing and financing health care systems effectively.
+7. Using information to support public health and relevant research.
+<split>
+Q: What competencies are focused on in the Cyber Security Analysis Program?  
+A: 1. Analyzing local and international political issues related to Arab affairs.
+2. Understanding social and human sciences for political analysis.
+3. Identifying regional and international security challenges and their impacts.
+4. Utilizing advanced techniques for collecting and analyzing political data.
+5. Presenting information related to Arab political affairs to decision-makers.
+6. Analyzing the role of international organizations in the Arab political landscape.
+7. Predicting developments and identifying opportunities and challenges in Arab political security.
+<split>
+Q: What is the structure of academic programs in the College of Computer Science and Data Sciences?  
+A: All academic programs require students to complete a total of 140 credit hours, divided as follows:
+
+- University Requirements:
+  - Mandatory: 4 credits
+  - Optional: 6 credits
+
+- College Requirements:
+  - Mandatory: 48 credits
+  - Optional: 12 credits
+
+- Program Requirements:
+  - Mandatory: 58 credits
+  - Optional: 12 credits
+<split>
+Q: What are the compulsory college requirements for students in academic programs?  
+A:  Every student must study 16 compulsory courses totaling 48 credit hours. The specific details, including the number of credit hours for each course, lectures, practical lessons, and prerequisites, are outlined in a designated table within the college's academic documentation.
+<split>
+Q: What are the elective college requirements for students in academic programs?  
+A:  Students must complete 4 elective courses, totaling 12 credit hours. These courses can be selected from a specified list or from compulsory courses in the study plans of other college programs.
+<split>
+Q: What is the minimum number of credits I can register?
+A: The minimum number of credit hours that a student is allowed to register for in the fall and spring semesters is 12 credit hours, except in cases of graduation based on the proposal of the Education and Student Affairs Committee and the approval of the College Council.
+<split>
+Q: What is the Maximum number of credits I can register?
+A: The maximum number of credit hours that a student is allowed to register for in the fall and spring semesters is 19 credit hours and may be increased to 21 credit hours for students who achieve a general cumulative average of no less than 3.333 (see Article 9: Evaluation and Grading System) or for cases of graduation during the last academic level for non-failing students.
+<split>
+Q: how many credit hours I can register in summer?
+A: The maximum number of credit hours that a student is allowed to register for in the summer semester is 9 credit hours.
+<split>
+Q: Can I register less than 12 credit hours?
+A: The minimum number of credit hours that a student is allowed to register for in the fall and spring semesters is 12 credit hours, except in cases of graduation based on the proposal of the Education and Student Affairs Committee and the approval of the College Council. 
+But, students placed under academic probation in the following semester are not allowed to register for more than 12 credit hours, and a student with a failure is not allowed to register for more than 12 credit hours in the fall and spring semesters.
+<split>
+Q: How many programs are in Alexandria university?
+A: there are 6 programs in Alexandria university
+General program : Computing and Data Sciences
+Business Analytics
+Intelligent Systems
+Media Analytics
+Healthcare Informatics and Data Analytics
+Cybersecurity
+<split>
+Q: Can you explain the code of the course?
+A: Each course in the program has a code number consisting of five parts, nine numbers, each of which has a special meaning, as shown in the following example: The E-health, Telehealth and Telemedicine course follows the fifth program and is the first course in the order of the fourth-level courses and is expressed by the code 02-24-05401-04-01, for example:
+University Code: 02
+Faculty Code: 24
+Program Code: 05401
+Academic Level: 04
+Course Order Within Level: 01
+<split>
+Q: Can you explain the code 02-24-00101?
+A: Each course in the program has a code number consisting of five parts, nine numbers, each of which has a special meaning, as shown in the following example: The E-health, Telehealth and Telemedicine course follows the fifth program and is the first course in the order of the fourth-level courses and is expressed by the code 02-24-00101, for example:
+University Code: 02
+Faculty Code: 24
+Program Code: 00101
+<split>
+Q: Explain the Study System in Alexandria University.
+A: The Study System in the Bachelor's Program in Computer Science and Data Science in Alexandria University is based on the credit hour system and the semester system. The academic year is divided into two main semesters (fall and spring), each of which lasts fifteen weeks. The College Council may decide to hold a summer semester with a study period of eight weeks, provided that the weekly study hours allocated to the courses taught in this semester are doubled. The study is followed by written and practical exams.
+<split>
+Q: What do Credit Hours mean?
+A: A Credit Hour is a unit of measurement to determine the weight of each course in the main semester, , and it is equivalent to:
+One theoretical hour per week.
+Two hours of exercises or practical lessons per week.
+Three hours of practical training per week.
+Four hours of field training per week.
+<split>
+Q: What is the language of the courses in the faculty of computers and data science in Alexandria University?
+A: English is the official language of study in the faculty of computers and data science in Alexandria University, and some courses may be taught in Arabic based on the approval of the college and university councils.
+<split>
+Q: How many Credit Hours should I finish to graduate?
+A: Obtaining a Bachelor's degree in Computer Science and Data Sciences according to the credit hour system requires passing 140 credit hours at least, including the requirements of the university, college and program in a period of no less than 7 basic semesters, provided that the overall cumulative grade point average upon graduation is not less than 2.00.
+<split>
+Q: What is the distribution of Credit Hours in the faculty of computers and data science in Alexandria university?
+A: First: University requirements (10 credit hours):
+
+A. Mandatory requirements (4 credit hours):
+
+1. Critical Thinking course (2 credit hours).
+
+2. Innovation and Entrepreneurship course (2 credit hours).
+
+3. Human Rights and Anti-Corruption course
+
+4. Community Service and Environmental Development
+
+5. Military Education
+
+ Graduation requirement and its hours are not counted within the credit hours required for graduation.
+
+B. Elective Requirements (6 credit hours):
+
+Three courses, each of which is (2 credit hours), from the list of elective courses offered by the university colleges that advance the student's thinking and culture. The student may not register for the elective courses offered by his college, and this list may be reviewed and amended with the approval of the University Council.
+
+Second: College Requirements (60 credit hours):
+
+A. College Compulsory Courses (48 credit hours).
+B. College Elective Courses (12 credit hours).
+
+Third: Program Requirements (70 credit hours):
+
+A. Program Compulsory Courses (58 credit hours, including 4 credit hours of field training).
+B. Program Elective Courses (12 credit hours).
+<split>
+Q: What is the range of grades?
+A: the range of grades:
+| Letter Grade | Points | Percentage Range                     |
+|--|--|--|
+| A            | 4      | 90% and above                        |
+| A-           | 3.666  | 85% to less than 90%                |
+| B+           | 3.333  | 80% to less than 85%                |
+| B            | 3      | 75% to less than 80%                |
+| B-           | 2.666  | 70% to less than 75%                |
+| C+           | 2.333  | 65% to less than 70%                |
+| C            | 2      | 60% to less than 65%                |
+| C-           | 1.666  | 56% to less than 60%                |
+| D+           | 1.333  | 53% to less than 56%                |
+| D            | 1      | 50% to less than 53%                |
+| F            | 0      | Less than 50% of the total grade    |
+| (F)          | 0      | Less than 30% of the written exam grade |
+| Abs          | 0      | Absent from the written exam without a valid excuse |
+<split>
+Q: What is the Grade letter for each GPA?
+A: the Grade letter for each (GPA):
+| Letter Grade | Points | Percentage Range                     |
+|--|--|--|
+| A            | 4      | 90% and above                        |
+| A-           | 3.666  | 85% to less than 90%                |
+| B+           | 3.333  | 80% to less than 85%                |
+| B            | 3      | 75% to less than 80%                |
+| B-           | 2.666  | 70% to less than 75%                |
+| C+           | 2.333  | 65% to less than 70%                |
+| C            | 2      | 60% to less than 65%                |
+| C-           | 1.666  | 56% to less than 60%                |
+| D+           | 1.333  | 53% to less than 56%                |
+| D            | 1      | 50% to less than 53%                |
+| F            | 0      | Less than 50% of the total grade    |
+| (F)          | 0      | Less than 30% of the written exam grade |
+| Abs          | 0      | Absent from the written exam without a valid excuse |
+<split>
+Q: What is the meaning of the grade letters?
+A: meaning of the grade letters or Symbols:
+| Symbol | Meaning                                         |
+|--|--|
+| W      | Withdrawn from course                           |
+| FW     | Forced withdrawal from course                   |
+| MW     | Withdrawn for military service                  |
+| I      | Course incomplete (incomplete course)          |
+| IP     | Extended grade reported in the first semester for a two-semester course |
+| S      | Satisfactory                                   |
+| U      | Unsatisfactory                                 |
+| AU     | Audit                                          |
+<split>
+Q: What Letters S and U mean in GPA?
+A: Symbols (S, U) used in assessing the following mandatory university requirements:
+Human Rights and Anti-Corruption.
+Community Service and Environmental Development.
+Those Symbols have no effect on the GPA and means that you passed the courses.
+<split>
+Q: Why do I have S in my GPA?
+A: Symbols (S, U) used in assessing the following mandatory university requirements:
+Human Rights and Anti-Corruption.
+Community Service and Environmental Development.
+Those Symbols have no effect on the GPA and means that you passed the courses.
+<split>
+Q: Why do I have U in my GPA?
+A: Symbols (S, U) used in assessing the following mandatory university requirements:
+Human Rights and Anti-Corruption.
+Community Service and Environmental Development.
+Those Symbols have no effect on the GPA and means that you passed the courses.
+<split>
+Q: What range is A in the GPA?
+A: the range for each grades:
+| Letter Grade | Points | Percentage Range                     |
+|--|--|--|
+| A            | 4      | 90% and above                        |
+| A-           | 3.666  | 85% to less than 90%                |
+| B+           | 3.333  | 80% to less than 85%                |
+| B            | 3      | 75% to less than 80%                |
+| B-           | 2.666  | 70% to less than 75%                |
+| C+           | 2.333  | 65% to less than 70%                |
+| C            | 2      | 60% to less than 65%                |
+| C-           | 1.666  | 56% to less than 60%                |
+| D+           | 1.333  | 53% to less than 56%                |
+| D            | 1      | 50% to less than 53%                |
+| F            | 0      | Less than 50% of the total grade    |
+| (F)          | 0      | Less than 30% of the written exam grade |
+| Abs          | 0      | Absent from the written exam without a valid excuse |
+<split>
+Q: How to calculate the GPA?
+A: Calculating the Semester Grade Point Average (GPA):
+Semester GPA = (Σ(Points for each course × Credit Hours for each course)) / Σ(Credit Hours for all courses))
+
+The overall cumulative grade point average (CGPA) is calculated using the following equation:
+Overall CGPA = (Σ(Points of each course × Credit Hours of each course)) / Σ(Total Credit Hours for all courses))
+
+In calculating both the semester and overall cumulative average, the result is rounded to four decimal places.
+<split>
+Q: How to calculate the GPA in the Semester?
+A: Calculating the Semester Grade Point Average (GPA):
+Semester GPA = (Σ(Points for each course × Credit Hours for each course)) / Σ(Credit Hours for all courses))
+
+In calculating both the semester and overall cumulative average, the result is rounded to four decimal places.
+<split>
+Q: How to calculate the overall GPA?
+A: The overall cumulative grade point average (CGPA) is calculated using the following equation:
+Overall CGPA = (Σ(Points of each course × Credit Hours of each course)) / Σ(Total Credit Hours for all courses))
+
+In calculating both the semester and overall cumulative average, the result is rounded to four decimal places.
+<split>
+Q: How to calculate the cumulative GPA?
+A: The overall cumulative grade point average (CGPA) is calculated using the following equation:
+Overall CGPA = (Σ(Points of each course × Credit Hours of each course)) / Σ(Total Credit Hours for all courses))
+
+In calculating both the semester and overall cumulative average, the result is rounded to four decimal places.
+<split>
+Q: What is the maximum number of credit hours a student can register in summer?
+A: The maximum number of credit hours that a student is allowed to register for in the summer semester is 9 credit hours.
+<split>
+Q: How many credit hours should I finish to move to the next level?
+A: Students are classified during their studies into four study levels according to the number of credit hours passed as follows:
+
+First level: from 0 to 28 credit hours.
+Second level: from 29 to 64 credit hours.
+Third level: from 65 to 98 credit hours.
+Fourth level: from 99 to 140 credit hours.
+<split>
+Q: How many Credit Hours  should I finish to move to the second level?
+A: Students are classified during their studies into four study levels according to the number of credit hours passed as follows:
+
+First level: from 0 to 28 credit hours.
+Second level: from 29 to 64 credit hours.
+Third level: from 65 to 98 credit hours.
+Fourth level: from 99 to 140 credit hours.
+
+Which means you have to finish at least 29 credit Hours to move to the second level.
+<split>
+Q: How many Credit Hours  should I finish to move to the Third level?
+A: Students are classified during their studies into four study levels according to the number of credit hours passed as follows:
+
+First level: from 0 to 28 credit hours.
+Second level: from 29 to 64 credit hours.
+Third level: from 65 to 98 credit hours.
+Fourth level: from 99 to 140 credit hours.
+
+Which means you have to finish at least 65 credit Hours to move to the Third level.
+<split>
+Q: How many Credit Hours  should I finish to move to the Fourth level?
+A: Students are classified during their studies into four study levels according to the number of credit hours passed as follows:
+
+First level: from 0 to 28 credit hours.
+Second level: from 29 to 64 credit hours.
+Third level: from 65 to 98 credit hours.
+Fourth level: from 99 to 140 credit hours.
+
+Which means you have to finish at least 99 credit Hours to move to the Fourth level.
+<split>
+Q: Who is the Academic Advisor?
+A: The College's Education and Student Affairs Council shall appoint an academic advisor for each student, to familiarize the student with his/her study plan, follow up on its implementation, and choose compulsory and elective courses according to that plan. The academic advisor's opinion shall be advisory and non-binding, and course registration shall not be approved except with the approval of the academic advisor on the student's study load.
+<split>
+Q: Can I register for my courses late?
+A: The college council may allow late registration during the second week for those who fail to register on the specified date with an excuse accepted by the Education and Student Affairs Committee.
+<split>
+Q: What happens if I didn’t register my courses before the simister?
+A: The college council may allow late registration during the second week for those who fail to register on the specified date with an excuse accepted by the Education and Student Affairs Committee.
+After the second week, you can’t register more courses.
+<split>
+Q: Why can't I register for some courses from a later simister?
+A: The student is not allowed to register in any course that requires a pre-requisite unless he passes that pre-requisite, and the college council may set the necessary controls for that.
+The course you are trying to register for could have a pre-requisite that you didn’t pass.
+<split>
+Q: Can I register a course without passing it’s pre-requisite?
+A: No, The student is not allowed to register in any course that requires a pre-requisite unless he passes that pre-requisite, and the college council may set the necessary controls for that.
+<split>
+Q: What is a pre-requisite?
+A: pre-requisite or prerequisite is a course required to pass in order to register another course, The student is not allowed to register in any course that requires a pre-requisite unless he passes that pre-requisite, and the college council may set the necessary controls for that.
+<split>
+Q: Can I add or delete courses?
+A: The student has the right to delete/add any course starting from the beginning of the second week until the end of the third week of the main semester or the end of the first week of the summer semester after completing the deletion and addition form and its approval by the academic advisor without the deleted course appearing in his academic record, provided that the deletion and addition does not affect the student's academic load.
+<split>
+Q: How long can I Add or Delete a course?
+A: The student has the right to delete/add any course starting from the beginning of the second week until the end of the third week of the main semester or the end of the first week of the summer semester.
+<split>
+Q: When can I add or delete courses?
+A: The student has the right to delete/add any course starting from the beginning of the second week until the end of the third week of the main semester or the end of the first week of the summer semester.
+<split>
+Q: Why can't I delete a course?
+A: You can delete a course provided that the deletion and addition does not affect the student's academic load, which means that deleting a course will affect your academic load, that makes you register less than 12 credit hours.
+<split>
+Q: Will deleting a course affect my GPA?
+A: No, deleting a course will not appear in his academic record, provided that the deletion and addition does not affect the student's academic load.
+<split>
+Q: Can a student withdraw from a course?
+A: The student is allowed to withdraw from the course starting from the fourth week until the end of the twelfth week of the main semester and during the sixth week of the summer semester after completing the withdrawal form and its approval by the academic advisor, provided that the withdrawal does not affect the student’s academic load (see Article 10: Academic Load). In this case, the student’s hours for this course will not be counted and a Withdrawal (W) grade will be recorded for him in his academic record, provided that the student has not exceeded the specified absence rate before the withdrawal. B. Withdrawal requests after the specified dates will be submitted to the College’s Education and Student Affairs Committee for consideration.
+ <split>
+Q: How long can I withdraw from a course?
+A: The student is allowed to withdraw from the course starting from the fourth week until the end of the twelfth week of the main semester and during the sixth week of the summer semester.
+<split>
+Q: What is the deadline for withdrawing a course?
+A: The student is allowed to withdraw from the course starting from the fourth week until the end of the twelfth week of the main semester and during the sixth week of the summer semester.
+<split>
+Q: Can I withdraw from a course after the twelfth week of the main semester?
+A: No, The student is allowed to withdraw from the course starting from the fourth week until the end of the twelfth week of the main semester and during the sixth week of the summer semester.
+<split>
+Q: Can I withdraw from a course Before the twelfth week of the main semester?
+A: Yes, The student is allowed to withdraw from the course starting from the fourth week until the end of the twelfth week of the main semester and during the sixth week of the summer semester.
+<split>
+Q: Why can't I withdraw from a course?
+A: You can withdraw from a course provided that the withdrawal does not affect the student’s academic load.which means that withdrawing a course will affect your academic load, that makes you register less than 12 credit hours.
+<split>
+Q: Will the withdrawn course affect my GPA?
+A: No, In case of withdrawing a course, the student’s hours for this course will not be counted and a Withdrawal (W) grade will be recorded for him in his academic record, provided that the student has not exceeded the specified absence rate before the withdrawal.
+<split>
+Q: Will "W" grade be calculated in my GPA?
+A: No, In case of withdrawing a course, the student’s hours for this course will not be counted and a Withdrawal (W) grade will be recorded for him in his academic record, provided that the student has not exceeded the specified absence rate before the withdrawal.
+<split>
+Q: why isn't the student allowed to take the final exam?
+A: The student is not allowed to take the final exam unless he/she attends at least 75% of the practical teaching hours of the course.
+The student will be deprived of taking the final exam if his/her absence exceeds 25% of the practical teaching hours of the course and will be given a grade of (Forced Withdrawal (FW) and must repeat the course.
+<split>
+Q: What is the maximum number of absences I can take?
+A: The student is not allowed to take the final exam unless he/she attends at least 75% of the practical teaching hours of the course.The student must be warned after missing 15% of the practical teaching hours of the course without an acceptable excuse.
+He/she will receive a second warning after missing 20% ​​of the practical teaching hours of the course.
+The student will be deprived of taking the final exam if his/her absence exceeds 25% of the practical teaching hours of the course and will be given a grade of (Forced Withdrawal (FW) and must repeat the course.
+<split>
+Q: What happens If a student's absence exceeds 25%?
+A: The student is not allowed to take the final exam unless he/she attends at least 75% of the practical teaching hours of the course. The student must be warned after missing 15% of the practical teaching hours of the course without an acceptable excuse.
+He/she will receive a second warning after missing 20% ​​of the practical teaching hours of the course.
+The student will be deprived of taking the final exam if his/her absence exceeds 25% of the practical teaching hours of the course and will be given a grade of (Forced Withdrawal (FW) and must repeat the course.
+<split>
+Q: What if I failed to attend the final exam for any course?
+A: A. If a student fails to attend the final exam for any course and submits a compelling excuse accepted by the College’s Education and Student Affairs Committee within two days at most from the exam date and completes an incomplete course application, a provisional grade of Incomplete (I) will be given to him in this course, provided that he has obtained at least 60% of the semester work grades and has not been denied entry to the final exam. See Article 16: Attendance).
+B. In the case of a grade of (1) Incomplete, the student will have the opportunity to take the final exam during the first week of the following semester directly or as determined by the College Council, and the student’s total grade in this course will be the final exam grade plus the total grades he previously obtained during the semester.
+C. In the event that a student fails to complete a course in which he obtained a grade of (Incomplete (I), he will receive an Abs grade and must re-study this course.
+D. The number of semesters in which a student submits one or more applications for an incomplete course should not exceed three semesters during the study period.
+E. If a student fails to attend the final exam for any course without An excuse accepted by the Education and Student Affairs Committee, he gets an Abs grade and must re-study this course.
+<split>
+Q: What if a student fails to attend the final exam for any course?
+A: A. If a student fails to attend the final exam for any course and submits a compelling excuse accepted by the College’s Education and Student Affairs Committee within two days at most from the exam date and completes an incomplete course application, a provisional grade of Incomplete (I) will be given to him in this course, provided that he has obtained at least 60% of the semester work grades and has not been denied entry to the final exam. See Article 16: Attendance).
+B. If a student fails to attend the final exam for any course without An excuse accepted by the Education and Student Affairs Committee, he gets an Abs grade and must re-study this course.
+<split>
+Q: What happens if a student gets a grade (I) Incomplete?
+A: In the case of a grade of (I) Incomplete, the student will have the opportunity to take the final exam during the first week of the following semester directly or as determined by the College Council, and the student’s total grade in this course will be the final exam grade plus the total grades he previously obtained during the semester.
+ <split>
+Q: What happens if I got a grade (I) Incomplete?
+A: In the case of a grade of (I) Incomplete, the student will have the opportunity to take the final exam during the first week of the following semester directly or as determined by the College Council, and the student’s total grade in this course will be the final exam grade plus the total grades he previously obtained during the semester.
+<split>
+Q: what happens if a student fails to complete a course in which he obtained a grade of (Incomplete) (I):
+A: In the event that a student fails to complete a course in which he obtained a grade of (Incomplete) (I), he will receive an Abs grade and must re-study this course.
+<split>
+Q: How many semesters can a student get grade (I) incomplete?
+A: The number of semesters in which a student submits one or more applications for an incomplete course should not exceed three semesters during the study period.
+<split>
+Q: How many semesters can I get grade (I) incomplete?
+A: The number of semesters in which a student submits one or more applications for an incomplete course should not exceed three semesters during the study period.
+<split>
+Q: How can a Student repeat a course?
+A: A. If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
+B. If the student gets an unsatisfactory level U in one of the graduation requirements, he must re-study this course.
+C. An academically struggling student may re-study a course for the purpose of improving the overall cumulative average (CGPA).
+D. When calculating the overall cumulative average, the passing grade is counted for the first 8 attempts only in which the student re-studies a course, while for anything beyond that, the grades of both failure and passing are counted in his overall cumulative average.
+E. If a student fails a course repeatedly, the failure will be counted once in his overall cumulative average, with the number of times he took the exam for that course recorded in his academic record, and the points he obtained in his attempts will be included in calculating the overall cumulative average (CGPA) in all semesters.
+<split>
+Q: What if a student gets an F or (F) grade in any course?
+A: If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
+<split>
+Q: What if I got an F or (F) grade in any course?
+A: If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
+B. If the student gets an unsatisfactory level U in one of the graduation requirements, he must re-study this course.
+<split>
+Q: What if a student gets an (Abs) grade in any course?
+A: If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
+B. If the student gets an unsatisfactory level U in one of the graduation requirements, he must re-study this course.
+<split>
+Q: What if I got an (Abs) grade in any course?
+A: If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
+B. If the student gets an unsatisfactory level U in one of the graduation requirements, he must re-study this course.
+<split>
+Q: What if a student gets an (FW) grade in any course?
+A: If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
+B. If the student gets an unsatisfactory level U in one of the graduation requirements, he must re-study this course.
+<split>
+Q: What if I got an (FW) grade in any course?
+A: If the student gets an F or (F) or Abs or FW grade in any course, he must re-study this course if it is mandatory and he has the right to study an alternative course if it is optional, and the grade he got will be counted for him.
+B. If the student gets an unsatisfactory level U in one of the graduation requirements, he must re-study this course.
+<split>
+Q: What if I am struggling in my studies?
+A: An academically struggling student on the academic probation and warning list may re-study a course for the purpose of improving the overall cumulative average (CGPA) only if he got a grade (D) in this course.
+<split>
+Q: Does (F) grade get calculated in the CGPA?
+A: No, When calculating the overall cumulative average, only the passing grade is counted for the first 8 attempts in which the student re-studies a course, while for anything beyond that, the grades of both failure and passing are counted in his overall cumulative average.
+If a student fails a course repeatedly (over 8 times), the failure will be counted once in his overall cumulative average, with the number of times he took the exam for that course recorded in his academic record, and the points he obtained in his attempts will be included in calculating the overall cumulative average (CGPA) in all semesters.
+<split>
+Q: Does (F) grade get calculated in the CGPA?
+A: No, When calculating the overall cumulative average, only the passing grade is counted for the first 8 attempts in which the student re-studies a course, while for anything beyond that, the grades of both failure and passing are counted in his overall cumulative average.
+<split>
+Q: How many times can I get F grade before it affects my CGPA?
+A: When calculating the overall cumulative average, only the passing grade is counted for the first 8 attempts in which the student re-studies a course, while for anything beyond that, the grades of both failure and passing are counted in his overall cumulative average.
+So the Answer is 8 times.
+<split>
+Q: What is Academic Probation?
+A: The student is considered to be in default and is given a warning and academic probation if he obtains a cumulative GPA of less than 1.666 at the end of the second semester of enrollment in the programs or less than 2.000 in any other semester thereafter.
+<split>
+Q: Can a student who is on the academic probation and warning list be allowed to retake a course for the purpose of improvement?
+A: Yes, The student who is on the academic probation and warning list is allowed to retake a course for the purpose of improvement and the highest grade he obtained in this course is calculated for him.
+<split>
+Q: How can a Student in the Academic Probation improve his CGPA?
+A: The student who is on the academic probation and warning list is allowed to retake a course for the purpose of improvement and the highest grade he obtained in this course is calculated for him.
+<split>
+Q: When can I remove myself from the Academic Probation?
+A: If the student placed under academic probation in a semester obtains a cumulative GPA of 2.000 or more, academic probation is lifted.
+<split>
+Q: When can a student be lifted from the Academic Probation?
+A: If the student placed under academic probation in a semester obtains a cumulative GPA of 2.000 or more, academic probation is lifted.
+<split>
+Q: How many semesters can a student be under Academic Probation before being dismissed?
+A: The student is dismissed from the college in the event that he obtains a cumulative GPA of less than 2.000 after three consecutive semesters or four separate semesters.
+<split>
+Q: Can a student under the Academic Probation be dismissed?
+A: The student is dismissed from the college in the event that he obtains a cumulative GPA of less than 2.000 after three consecutive semesters or four separate semesters.
+<split>
+Q: Can low CGPA make me dismissed from the college/university?
+A: The student is dismissed from the college in the event that he obtains a cumulative GPA of less than 2.000 after three consecutive semesters or four separate semesters.
+<split>
+Q: Can I suspend a semester in college?
+A: Yes, The student may submit a request to suspend registration for one or more basic semesters, with a maximum of four separate or connected basic semesters, for reasons accepted by the College’s Education and Student Affairs Committee and approved by the College Council.
+<split>
+Q: Can I withdraw a semester in college?
+A: Yes, The student may submit a request to suspend registration for one or more basic semesters, with a maximum of four separate or connected basic semesters, for reasons accepted by the College’s Education and Student Affairs Committee and approved by the College Council.
+<split>
+Q: How many semesters can I suspend in college?
+A: The student may submit a request to suspend registration for one or more basic semesters, with a maximum of four separate or connected basic semesters, for reasons accepted by the College’s Education and Student Affairs Committee and approved by the College Council.
+So, the Answer is four separate or connected basic semesters.
+<split>
+Q: What if I didn’t register for any courses in college?
+A: The student is considered to have withdrawn from the semester if he/she does not register for any course during that semester, and it is counted among the four opportunities to suspend registration.
+<split>
+Q: What is MW grade?
+A: Military Withdraw. The student is allowed to withdraw from the study program after registration when called upon to perform military service, and he/she is given a Military Withdrawal (MW) rating, and this withdrawal is not counted among the four opportunities allowed to him/her by law.
+<split>
+Q: Can a student Withdraw from the study program to perform military services?
+A: Yes, The student is allowed to withdraw from the study program after registration when called upon to perform military service, and he/she is given a Military Withdrawal (MW) rating, and this withdrawal is not counted among the four opportunities allowed to him/her by law.
+<split>
+Q: Does MW affect my GPA?
+A: No, Military Withdraw (MW) is not counted among the four opportunities allowed to him/her by law and will not be affecting the GPA.
+<split>
+Q: Can I cancel my registration of the program?
+A: Yes, The student may cancel his registration in the program upon his request, and he may also submit a request for re-registration within a maximum of four basic semesters, provided that he explains the reasons for canceling the registration as well as the reasons for re-registration.
+
+It shall be presented to the College Council, and in the event of a recommendation for approval, it shall be presented to the University Council and the student shall be treated as a continuing student based on his previous status in the college before canceling his registration in the event of the approval of the University Council.
+
+He shall not have the right to stop registration after that.
+<split>
+Q: If a student canceled his program registration, can he continue his program later?
+A: The student may also submit a request for re-registration within a maximum of four basic semesters, provided that he explains the reasons for canceling the registration as well as the reasons for re-registration.
+<split>
+Q: If a student canceled his program before, can he cancel it again?
+A: No, Student shall not have the right to stop registration again after he re-registered the program, Student can cancel his registration only once.
+<split>
+Q: When can a student graduate?
+A: A student can graduate during:
+After the end of the fall semester of the academic year, During January.
+After the end of the spring semester of the academic year, During June.
+After the end of the summer semester of the academic year, During September.
+<split>
+Q: Which students are honored?
+A: Honors are awarded to students that have completed their graduation within 9 semesters or less, having gotten a GPA of 3.3333 or more during any of these semesters, and a total CGPA OF 3.666 or more, given they hadn't received a grade of F or had a Forced Withdrawal (FW) or U in any course, or had been subjected to any disciplinary penalty during their studies.
+<split>
+Q: What happens in case the top graduates had equal CGPA at graduation?
+A: When top graduates have equal CGPA, The result of their CGPA are rounded to four decimals and a comparison is made between the controls determined by the college council and the standards approved by the university council and all the rules, laws and regulations contained in the Universities Organization Law and its Executive Regulations.
+<split>
+Q: How can a student change their study program?
+A: Students are allowed to change the study program after spending a period in the same college, after fulfilling the conditions for joining the new program, taking the opinion of the academic advisor, obtaining the approval of the Education and Student Affairs Committee at the college, and the approval of the college council.
+<split>
+Q: Are the courses the student has taken counted when changing programs?
+A: Yes, the courses the student has taken can be counted when changing programs, provided that they are requirements of the new study program, and the remaining courses are not counted within the hours of the new study programs.
+<split>
+Q: Does the college admit the attendance from other colleges or universities?
+A: The college council may accept the attendance of students from the same college or from other colleges or universities as listeners for some courses at the college according to the rules determined by the college council, and the college shall grant a certificate of attendance as a listener.
+<split>
+Q: Can the student register for courses from outside the college or university?
+A: The student may register for courses from outside the college or university or from a foreign university and they will be counted within his study program after the content of these courses has been equated and the college council has approved that these courses be included in the calculation of the general cumulative grade point average (CGPA), provided that these courses do not exceed 25% of the hours required to graduate from the study program.
+<split>
+Q: What is a visiting student?
+A: A visiting student is a student from outside the university who studies some courses at the college without obtaining any degree after the approval of the Education and Student Affairs Committee and in accordance with the rules determined by the college council. The maximum registration limit in the main semester is 12 credit hours and in the summer semester 9 credit hours. The student is given a certificate of what he has studied and the grades of the courses he has studied and passed successfully.
+<split>
+Q: What is the registration limit for Continuous Learning students?
+A: The maximum registration limit for Continuous Learning students in the basic semester is 12 credit hours and 9 credit hours in the summer semester
+<split>
+Q: What is the learning methodology in the College of Computer Science and Data Science?
+A: The College of Computer Science and Data Science adopts the competency-based learning methodology. Based on the competencies required of graduates in the labor market, the various academic programs of the college include competencies included in the National Skills Framework in the field of communications and information, which was approved by the Ministry of Communications and Information Technology, in addition to other reference competencies approved by international programs in similar specializations. Some competencies were selected based on the labor market's need for them at the national level and at the labor market level in the Middle East and even in the world, as Egyptian educational institutions provide a large group of highly qualified workers in the field of communications and information for countries in the region and globally. Accordingly, the selection of academic programs is based on a realistic and studied need.
+<split>
+Q: How does The College of Computer Science and Data Science prepare me for work?
+A: Based on the professions required in the communications and information sector and the skills and competencies required for them, the latter directed the selection of programs in this regulation to ensure that the graduate is suitable for the needs of the labor market and equipped with what is necessary for him. This requires presenting educational content in innovative ways, centered around the student and linked to the industry. The following basic competencies have been identified to build the list, in addition to other supporting competencies, and they are stated as follows for each program.
+<split>
+Q: What does the “Business Application Development” Program have to offer?
+A: Business Application Development Program offers:
+Analysis and design of business processes.
+Creating data collection solutions based on modern trends in technology.
+Building data warehouses from different sources of data.
+Using different methods of data analysis to support decisions in business organizations.
+Localization and management of information systems including the legal aspect to support digital transformation.
+Data analysis in different sectors with high capacity to generate data such as digital marketing, e-commerce, and e-government services.
+Developing solutions and products based on data analysis technology to represent the nucleus of new projects.
+<split>
+Q: What does the “Smart Systems” Program have to offer?
+A: Smart Systems Program offers:
+Identify, analyze and evaluate the components and basics of smart systems.
+Collect and analyze information and predictions from big data and assist in decision-making.
+Design, build and test smart computing systems.
+Design and build embedded systems software and robotics.
+Learn how to design, create and manage smart cities.
+Provide the necessary support, management and maintenance to ensure the effectiveness and efficiency of smart systems.
+Review and evaluate available results to determine the usefulness and effectiveness of existing systems.
+<split>
+Q: What does the “Media Analytics” Program have to offer?
+A: Media Analytics Program offers:
+Analysis of media content and anticipation of changes in the digital media environment at the local and global levels.
+Production of all forms of digital radio and television programs using multimedia techniques, digital photography and editing.
+Using computing and technology to analyze data for all elements of journalistic work (report, article, investigation, and even journalistic directing techniques) in a digital and electronic manner.
+Developing media practices in light of the use of computer expertise and data and information sciences.
+Localizing digitization in various media institutions (radio, press, television), including the shift towards digital archives.
+Building observatories to analyze big data on social networks and sentiment analysis.
+Developing mechanisms for public opinion polls on various issues based on electronic measurement and electronic surveys in a manner that serves national goals.
+Developing media policies based on scientific analyses for international media platforms and documentary and recording programs.
+<split>
+Q: What does the “Healthcare Analytics and Informatics” Program  have to offer?
+A: Healthcare Analytics and Informatics Program offers:
+Describe the basic concepts in health, medical and life sciences.
+Use data, information and knowledge in various health fields.
+Identify the basic determinants related to health such as genetics, physiology, psychology and environment and how to evaluate them.
+Identify mechanisms for making clinical, diagnostic and therapeutic health decisions.
+Enabling the importance of information sharing between different health care institutions.
+Excellence in the management, financing and service of health care systems.
+Use information to support public health and research that serves health fields.
+<split>
+Q: What does the “Cyber Security Analysis” Program have to offer?
+A: Cyber Security Analysis Program offers:
+Analysis and interpretation of local and international political issues related to Arab affairs.
+Understanding of social and human sciences related to political analysis and employing them to understand contemporary political phenomena.
+Identifying and analyzing regional and international security challenges, and evaluating their impact on the Arab region.
+Being able to use advanced methods and techniques in collecting and analyzing political and security data.
+Collecting and analyzing information related to Arab political affairs and presenting it to security and political decision-makers.
+Analyzing the role, position, and interests of international organizations in the Arab political arena, and determining their positions on existing challenges.
+Predicting regional and international developments, and identifying the opportunities and challenges facing them in the field of Arab political security.
+<split>
+Q: What are the requirements for the Academic programs?
+A: All academic programs of the College of Computer Science and Data Sciences include the requirements of the university, college, and program, where the student studies 140 credit hours divided as shown in the following:
+University Requirements
+* Mandatory: 4 credits
+* Optional: 6 credits
+College Requirements
+* Mandatory: 48 credits
+* Optional: 12 credits
+Program Requirements
+* Mandatory: 58 credits
+* Optional: 12 credits
+Total
+140 credits
+
+Every student in any of the college’s academic programs must study the following 16 compulsory courses, totaling 48 credit hours, as shown in the following table, which shows the number of credit hours for each course (Cr), lectures (Lecture), practical lessons (Practical), as well as the pre-requisites for the courses.
+<split>
+Q: How many elective courses should I take?
+A: Each student in any of the college’s academic programs must study 4 elective courses, totaling 12 credit hours, from the following list of courses or from the compulsory courses in the study plan for other college programs
+<split>
+Q: how many levels are there in the Faculty?
+A: The undergraduate study period at the college is four academic years divided into eight semesters, each of which lasts fifteen weeks, according to the credit hour system.
+<split>
+Q: I have a gpa 3.2 is this A or B?
+A: A: A student's result in each course is estimated using the following grading scale:
+
+| Letter Grade | Points | Percentage Range                     |
+|--|--|--|
+| A            | 4      | 90% and above                        |
+| A-           | 3.666  | 85% to less than 90%                |
+| B+           | 3.333  | 80% to less than 85%                |
+| B            | 3      | 75% to less than 80%                |
+| B-           | 2.666  | 70% to less than 75%                |
+| C+           | 2.333  | 65% to less than 70%                |
+| C            | 2      | 60% to less than 65%                |
+| C-           | 1.666  | 56% to less than 60%                |
+| D+           | 1.333  | 53% to less than 56%                |
+| D            | 1      | 50% to less than 53%                |
+| F            | 0      | Less than 50% of the total grade    |
+| (F)          | 0      | Less than 30% of the written exam grade |
+| Abs          | 0      | Absent from the written exam without a valid excuse |

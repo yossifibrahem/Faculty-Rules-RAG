@@ -3,8 +3,8 @@ import os
 from typing import List, Tuple, Optional
 
 # Constants
-RULES_DB_PATH = os.path.join(os.path.dirname(__file__), 'rules_db.pkl')
-RULES_FILE_PATH = os.path.join(os.path.dirname(__file__), 'rules.txt')
+RULES_DB_PATH = 'rules_db.pkl'
+RULES_FILE_PATH = 'rules.txt'
 
 def initialize_rules_db() -> None:
     """Initialize or load the rules database."""
@@ -15,7 +15,7 @@ def initialize_rules_db() -> None:
             VectorDB.load(RULES_DB_PATH)
         else:
             if not os.path.exists(RULES_FILE_PATH):
-                raise FileNotFoundError(f"Rules file not found: {RULES_FILE_PATH}")
+                raise FileNotFoundError(f"File not found: {RULES_FILE_PATH}")
             
             rules = load_rules(RULES_FILE_PATH)
             db.add_texts(rules)
@@ -36,13 +36,13 @@ def search_rules(query: str, top_k: int = 3) -> List[Tuple[str, float]]:
         return []
 
 def load_rules(file_path: str) -> List[str]:
-    """Load rules from the rules file."""
+    """Load text from the file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         return TextSplitter.split(content)
     except Exception as e:
-        print(f"Warning: Failed to load rules: {str(e)}")
+        print(f"Warning: Failed to load data: {str(e)}")
         return []
 
 # Initialize database when module is imported

@@ -212,10 +212,12 @@ def chat_loop() -> None:
         # Handle commands
         if user_input.lower() == "clear":
             messages = [
-                {"role": "system", 
+                {
+                "role": "system", 
                 "content": "you are an Assistant in faculty of Computers and data science,"
                 "you Assist students to understand the faculty rules and regulations."
-                "don't make up answers, it's important to use tools every question to get information."}
+                "don't make up answers, it's important to use tools every question to get information."
+                }
             ]
             os.system('cls' if os.name == "nt" else 'clear')
             display_welcome_banner()
