@@ -36,9 +36,8 @@ Tools = [{
     "function": {
         "name": "search_info",
         "description": (
-            "Use this every time the stuedent asks a question that require looking for."
-            "This tool searches the faculty rules and regulations for the given query."
-            "The tool returns the relevant information found in the rules."
+            "This tool Retrieve a snipped article from faculty rules and regulations"
+            "it searches for the most relevant information based on the user's query."
         ),
         "parameters": {
             "type": "object",
@@ -204,7 +203,7 @@ def chat_loop() -> None:
     show_help()
 
     while True:
-        print(f"\n{Fore.CYAN}You:{Style.RESET_ALL} ", end="")
+        print(f"\n{Fore.CYAN}>{Style.RESET_ALL} ", end="")
         user_input = input().strip()
 
         if not user_input:
