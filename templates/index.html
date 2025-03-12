@@ -58,7 +58,7 @@
             <div class="messages-header">
                 <div class="p-4 border-b border-gray-700">
                     <h1 class="font-bold flex items-center justify-center">
-                        Chat with AI <img src="static\conversation.png" height="25" width="25" class="ml-2">
+                        FCDS <img src="static\conversation.png" height="25" width="25" class="ml-2">
                     </h1>
                 </div>
                 <div class="messages-container p-4" id="messages"></div>
@@ -381,7 +381,7 @@
                     <div class="${className} rounded-lg py-2 px-4 max-w-3xl ${textColor}">
                         ${isUser ? `<div style="white-space: pre-wrap;">${formattedContent}</div>` : '<div class="assistant-content"></div>'}
                     </div>
-                    ${isUser ? `<img src="${avatar}" alt="Avatar" class="w-8 h-8 rounded-full">` : ''}
+                    ${isUser ? `<img src="${avatar}" alt="Avatar" class="w-8 h-8 rounded-full" style="margin-left: 5px">` : ''}
                 </div>
             `;
             els.messages.appendChild(div);
@@ -413,7 +413,7 @@
 
             const generators = {
                 RAG: () => ({
-                    title: args.query, icon: '📄',
+                    title: args.query, icon: '🔍',
                     content: Array.isArray(data) ? 
                         `<div class="space-y-4">${data.map(r => 
                             `<div class="text-sm text-gray-300 bg-gray-800 p-3 rounded-lg">${r.content}</div>`
@@ -422,7 +422,7 @@
                     className: 'bg-gray-900'
                 }),
                 FAQ: () => ({
-                    title: args.query, icon: '❔',
+                    title: args.query, icon: '📋',
                     content: Array.isArray(data) ?
                         `<div class="space-y-4">${data.map(r =>
                             `<div class="text-sm text-gray-300 bg-gray-800 p-3 rounded-lg">${r.content}</div>`

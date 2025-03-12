@@ -14,7 +14,16 @@ from tool_managment import links
 
 app = Flask(__name__)
 app.static_folder="templates"
-app.secret_key = os.urandom(24)  # Add secret key for session management
+
+# Configure session
+app.secret_key = 'JO12345678!_'  # Replace with a real secret key
+app.config['SESSION_TYPE'] = 'filesystem'
+app.config['SESSION_FILE_DIR'] = os.path.join(os.path.expanduser('~'), '.flask_sessions')
+app.config['PERMANENT_SESSION_LIFETIME'] = 31536000  # 1 year in seconds
+
+# Create session directory if it doesn't exist
+if not os.path.exists(app.config['SESSION_FILE_DIR']):
+    os.makedirs(app.config['SESSION_FILE_DIR'])
 
 @app.route('/style.css')
 def serve_css():
@@ -94,6 +103,7 @@ def get_user_conversation_dir(user_id):
 def before_request():
     if 'user_id' not in session:
         session['user_id'] = str(uuid.uuid4())
+        session.permanent = True  # Make the session permanent
     
     # Initialize user session if needed
     user_id = session['user_id']
@@ -150,39 +160,45 @@ def get_all_conversations():
     return sorted(conversations, key=lambda x: x["last_updated"], reverse=True)
 
 def get_conversation_name(messages):
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
+    current_conv_id = user_data['current_conversation_id']
+    user_dir = get_user_conversation_dir(user_id)
 
     user_messages = [msg for msg in messages if msg["role"] == "user"]
     assistant_messages = [msg for msg in messages if msg["role"] == "assistant"]
 
     if len(user_messages) > 2:
-        with open(f"{CONVERSATIONS_DIR}/{current_conversation_id}.json", "r") as f:
-            data = json.load(f)
-            return data["name"]
+        try:
+            with open(f"{user_dir}/{current_conv_id}.json", "r") as f:
+                data = json.load(f)
+                return data["name"]
+        except:
+            pass  # If file doesn't exist yet, generate new name
 
     number_of_messages = len(user_messages) + len(assistant_messages)
     conv = json.dumps(messages[:number_of_messages] if number_of_messages else messages)
 
     try:
         response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "You are an AI assistant specializing in creating concise conversation titles. "
-                    "Create a brief, relevant title (maximum 25 characters) for this conversation "
-                    "based on the 1-3 user messages and assistant responses. "
-                    "Return only the title, no quotes or extra text."
-                )
-            },
-            {
-                "role": "user",
-                "content": (conv)
-            }
-        ],
-        temperature = 1
-    )
-
+            model=MODEL,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are an AI assistant specializing in creating concise conversation titles. "
+                        "Create a brief, relevant title (maximum 25 characters) for this conversation "
+                        "based on the 1-3 user messages and assistant responses. "
+                        "Return only the title, no quotes or extra text."
+                    )
+                },
+                {
+                    "role": "user",
+                    "content": (conv)
+                }
+            ],
+            temperature = 1
+        )
         return response.choices[0].message.content.strip()[:40]
     except Exception as e:
         print(f"Error generating conversation name: {e}")

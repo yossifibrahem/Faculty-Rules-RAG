@@ -995,7 +995,7 @@ A: Required documents for application:
 - Receipts for payment of expenses, where payment is made by visa and not in cash.
 
 <split>
-Q: Who is the headmaster of the college?
+Q: Who is the Dean/headmaster of the college?
 A: the Dean Faculty of Computer and Data Science. is Dr. Magda Madbouly.
 <split>
 Q: Where can I find the course reasources?

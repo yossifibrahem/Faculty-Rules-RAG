@@ -132,6 +132,21 @@ body {
         0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
+#deleteLastMessageButton:hover {
+    background-color: #dc2626;
+    border-color: #dc2626;
+    box-shadow: 
+        0 7px 0 #991b1b,
+        0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+#deleteLastMessageButton:active {
+    transform: translateY(1px);
+    box-shadow: 
+        0 1px 0 #444,
+        0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
 .button-group {
     display: flex;
     justify-content: center;
