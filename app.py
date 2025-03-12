@@ -1,6 +1,6 @@
 import os
 import uuid
-from flask import Flask, render_template, request, jsonify, Response, stream_with_context, send_from_directory
+from flask import Flask, render_template, request, jsonify, Response, stream_with_context, send_from_directory, session
 import json
 from datetime import datetime
 from openai import OpenAI
@@ -14,6 +14,7 @@ from tool_managment import links
 
 app = Flask(__name__)
 app.static_folder="templates"
+app.secret_key = os.urandom(24)  # Add secret key for session management
 
 @app.route('/style.css')
 def serve_css():
@@ -78,45 +79,74 @@ if not os.path.exists(CONVERSATIONS_DIR):
     os.makedirs(CONVERSATIONS_DIR)
 
 current_conversation_id = None
-chat_messages = [
-            {"role": "system", 
-            "content": "you are an Assistant in faculty of Computers and data science,"
-            "you Assist students."
-            "don't make up answers, it's important to use tools every question to get information."}
-        ]
-interrupt_flag = False
+
+# Modified structure to store user-specific chat messages
+user_sessions = {}
+
+# Modified conversation directory structure
+def get_user_conversation_dir(user_id):
+    user_dir = os.path.join(CONVERSATIONS_DIR, user_id)
+    if not os.path.exists(user_dir):
+        os.makedirs(user_dir)
+    return user_dir
+
+@app.before_request
+def before_request():
+    if 'user_id' not in session:
+        session['user_id'] = str(uuid.uuid4())
+    
+    # Initialize user session if needed
+    user_id = session['user_id']
+    if user_id not in user_sessions:
+        user_sessions[user_id] = {
+            'current_conversation_id': None,
+            'chat_messages': [
+                {"role": "system", 
+                "content": "you are an Assistant in faculty of Computers and data science,"
+                "you Assist students."
+                "don't make up answers, it's important to use tools every question to get information."}
+            ]
+        }
 
 def save_conversation():
-    if current_conversation_id:
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
+    if user_data['current_conversation_id']:
         conversation_data = {
-            "id": current_conversation_id,
+            "id": user_data['current_conversation_id'],
             "last_updated": datetime.now().isoformat(),
-            "messages": chat_messages,
-            "name": get_conversation_name(chat_messages) if chat_messages else "New Conversation"
+            "messages": user_data['chat_messages'],
+            "name": get_conversation_name(user_data['chat_messages']) if user_data['chat_messages'] else "New Conversation"
         }
-        with open(f"{CONVERSATIONS_DIR}/{current_conversation_id}.json", "w") as f:
-            json.dump(conversation_data, f , indent=2)
+        user_dir = get_user_conversation_dir(user_id)
+        with open(f"{user_dir}/{user_data['current_conversation_id']}.json", "w") as f:
+            json.dump(conversation_data, f, indent=2)
 
 def load_conversation(conversation_id):
+    user_id = session['user_id']
     try:
-        with open(f"{CONVERSATIONS_DIR}/{conversation_id}.json", "r") as f:
+        user_dir = get_user_conversation_dir(user_id)
+        with open(f"{user_dir}/{conversation_id}.json", "r") as f:
             data = json.load(f)
             return data["messages"]
     except:
         return []
 
 def get_all_conversations():
+    user_id = session['user_id']
+    user_dir = get_user_conversation_dir(user_id)
     conversations = []
-    for filename in os.listdir(CONVERSATIONS_DIR):
-        if filename.endswith(".json"):
-            with open(f"{CONVERSATIONS_DIR}/{filename}", "r") as f:
-                data = json.load(f)
-                conversations.append({
-                    "id": data["id"],
-                    "last_updated": data["last_updated"],
-                    "name": data.get("name", "Unnamed Conversation"),
-                    "preview": data["messages"][0]["content"] if data["messages"] else "Empty conversation"
-                })
+    if os.path.exists(user_dir):
+        for filename in os.listdir(user_dir):
+            if filename.endswith(".json"):
+                with open(f"{user_dir}/{filename}", "r") as f:
+                    data = json.load(f)
+                    conversations.append({
+                        "id": data["id"],
+                        "last_updated": data["last_updated"],
+                        "name": data.get("name", "Unnamed Conversation"),
+                        "preview": data["messages"][0]["content"] if data["messages"] else "Empty conversation"
+                    })
     return sorted(conversations, key=lambda x: x["last_updated"], reverse=True)
 
 def get_conversation_name(messages):
@@ -160,16 +190,19 @@ def get_conversation_name(messages):
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    global current_conversation_id, chat_messages, interrupt_flag
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
     
     user_message = request.json.get('message')
-    stream = request.json.get('stream', False)  # Default to streaming
-    chat_messages.append({"role": "user", "content": str(user_message)})
+    stream = request.json.get('stream', False)
+    user_data['chat_messages'].append({"role": "user", "content": str(user_message)})
     
-    if not current_conversation_id:
-        current_conversation_id = str(uuid.uuid4())
+    if not user_data['current_conversation_id']:
+        user_data['current_conversation_id'] = str(uuid.uuid4())
     
     def generate_response():
+        # Replace global references with user_data references
+        chat_messages = user_data['chat_messages']
         continue_tool_execution = True
         
         while continue_tool_execution:
@@ -316,37 +349,41 @@ def list_conversations():
 
 @app.route('/conversation/<conversation_id>', methods=['GET'])
 def get_conversation(conversation_id):
-    global current_conversation_id, chat_messages
-    current_conversation_id = conversation_id
-    chat_messages = load_conversation(conversation_id)
-    return jsonify({"status": "success", "messages": chat_messages})
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
+    user_data['current_conversation_id'] = conversation_id
+    user_data['chat_messages'] = load_conversation(conversation_id)
+    return jsonify({"status": "success", "messages": user_data['chat_messages']})
 
 @app.route('/new', methods=['POST'])
 def new_conversation():
-    global current_conversation_id, chat_messages
-    current_conversation_id = str(uuid.uuid4())
-    chat_messages = [
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
+    user_data['current_conversation_id'] = str(uuid.uuid4())
+    user_data['chat_messages'] = [
         {"role": "system", 
         "content": "you are an Assistant in faculty of Computers and data science,"
         "you Assist students."
-        "don't make up answers, it's important to use FAQ tool every question to get information."}
+        "don't make up answers, it's important to use tools every question to get information."}
     ]
     return jsonify({
         "status": "success", 
-        "conversation_id": current_conversation_id,
+        "conversation_id": user_data['current_conversation_id'],
         "name": "New Conversation"
     })
 
 @app.route('/conversation/<conversation_id>', methods=['DELETE'])
 def delete_conversation(conversation_id):
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
     try:
-        file_path = f"{CONVERSATIONS_DIR}/{conversation_id}.json"
+        user_dir = get_user_conversation_dir(user_id)
+        file_path = f"{user_dir}/{conversation_id}.json"
         if os.path.exists(file_path):
             os.remove(file_path)
-            global current_conversation_id, chat_messages
-            if current_conversation_id == conversation_id:
-                current_conversation_id = None
-                chat_messages = [
+            if user_data['current_conversation_id'] == conversation_id:
+                user_data['current_conversation_id'] = None
+                user_data['chat_messages'] = [
                     {"role": "system", 
                     "content": "you are an Assistant in faculty of Computers and data science,"
                     "you Assist students."
@@ -370,6 +407,9 @@ def interrupt():
 
 @app.route('/messages', methods=['GET'])
 def get_messages():
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
+    chat_messages = user_data['chat_messages']
     formatted_messages = []
     current_tool_results = []
     current_tool_args = {}
@@ -432,7 +472,9 @@ def get_messages():
 
 @app.route('/delete-last', methods=['POST'])
 def delete_last_message():
-    global chat_messages
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
+    chat_messages = user_data['chat_messages']
     if len(chat_messages) >= 2:
         # Find the last user message index
         last_user_index = None
@@ -443,7 +485,7 @@ def delete_last_message():
         
         if last_user_index is not None:
             # Remove all messages after and including the last user message
-            chat_messages = chat_messages[:last_user_index]
+            user_data['chat_messages'] = chat_messages[:last_user_index]
             save_conversation()
             return jsonify({"status": "success"})
             
@@ -451,7 +493,9 @@ def delete_last_message():
 
 @app.route('/regenerate', methods=['POST'])
 def regenerate_response():
-    global chat_messages
+    user_id = session['user_id']
+    user_data = user_sessions[user_id]
+    chat_messages = user_data['chat_messages']
     if len(chat_messages) >= 1:
         last_user_message = None
         messages_to_remove = 0
@@ -463,7 +507,7 @@ def regenerate_response():
                 break
         
         if last_user_message:
-            chat_messages = chat_messages[:-messages_to_remove]
+            user_data['chat_messages'] = chat_messages[:-messages_to_remove]
             save_conversation()
             return jsonify({"status": "success", "message": last_user_message})
             
