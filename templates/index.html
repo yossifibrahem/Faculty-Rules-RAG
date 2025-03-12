@@ -532,36 +532,38 @@
         async function handleMessage(existingMessage = null) {
             const message = existingMessage || els.userInput.value.trim();
             if (!message) return;
-
+        
             if (!existingMessage) {
                 els.userInput.value = '';
                 els.userInput.rows = DEFAULT_ROWS;
                 createMessageElement(true, message);
             }
-
-            // Disable all control buttons during streaming
+        
             els.sendButton.classList.add('hidden');
             els.interruptButton.classList.remove('hidden');
             document.getElementById('regenerateResponseButton').disabled = true;
             document.getElementById('deleteLastMessageButton').disabled = true;
-
+        
             currentMessageElement = createMessageElement(false);
             currentResponse = '';
-
+        
             try {
                 const response = await fetch('/chat', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message })
+                    body: JSON.stringify({ 
+                        message,
+                        stream: false // Set to false for non-streaming responses
+                    })
                 });
-
+        
                 const reader = response.body.getReader();
                 const decoder = new TextDecoder();
-
+        
                 while (true) {
                     const { done, value } = await reader.read();
                     if (done) break;
-
+        
                     decoder.decode(value)
                         .split('\n')
                         .filter(Boolean)
@@ -583,6 +585,7 @@
                 document.querySelectorAll('pre code').forEach(block => Prism.highlightElement(block));
             }
         }
+        
 
         function adjustTextareaHeight() {
             const textarea = els.userInput;

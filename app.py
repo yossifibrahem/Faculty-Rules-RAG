@@ -163,6 +163,7 @@ def chat():
     global current_conversation_id, chat_messages, interrupt_flag
     
     user_message = request.json.get('message')
+    stream = request.json.get('stream', False)  # Default to streaming
     chat_messages.append({"role": "user", "content": str(user_message)})
     
     if not current_conversation_id:
@@ -177,74 +178,127 @@ def chat():
                     model=MODEL,
                     messages=chat_messages,
                     tools=Tools,
-                    stream=True,
+                    stream=stream,
                     temperature=0.2
                 )
                 
-                current_message = ""
-                tool_calls = []
-                
-                for chunk in response:
-                    if interrupt_flag:
-                        continue_tool_execution = False
-                        break
-
-                    delta = chunk.choices[0].delta
+                if not stream:
+                    # Handle non-streaming response
+                    if response.choices[0].message.content:
+                        chat_messages.append({"role": "assistant", "content": response.choices[0].message.content})
+                        yield f"data: {json.dumps({'type': 'content', 'content': response.choices[0].message.content})}\n\n"
                     
-                    if delta.content is not None:
-                        current_message += delta.content
-                        yield f"data: {json.dumps({'type': 'content', 'content': delta.content})}\n\n"
-                    
-                    elif delta.tool_calls:
-                        for tc in delta.tool_calls:
-                            # Show indicator when Python tool is called
-                            if tc.function and tc.function.name == "python": yield f"data: {json.dumps({'type': 'tool-start', 'name': 'coding', 'args': {'code': 'Writing code...'}})}\n\n"
-                            
-                            if len(tool_calls) <= tc.index:
-                                tool_calls.append({
-                                    "id": "", "type": "function",
-                                    "function": {"name": "", "arguments": ""}
-                                })
-                            tool_calls[tc.index] = {
-                                "id": (tool_calls[tc.index]["id"] + (tc.id or "")),
-                                "type": "function",
-                                "function": {
-                                    "name": (tool_calls[tc.index]["function"]["name"] + (tc.function.name or "")),
-                                    "arguments": (tool_calls[tc.index]["function"]["arguments"] + (tc.function.arguments or ""))
-                                }
+                    if response.choices[0].message.tool_calls:
+                        # Convert tool calls to dict format for storage
+                        tool_calls = [{
+                            "id": tc.id,
+                            "type": "function",
+                            "function": {
+                                "name": tc.function.name,
+                                "arguments": tc.function.arguments
                             }
-                
-                if current_message:
-                    chat_messages.append({"role": "assistant", "content": current_message})
-                
-                if tool_calls:
-                    chat_messages.append({"role": "assistant", "tool_calls": tool_calls})
-                    
-                    for tool_call in tool_calls:
-                        arguments = json.loads(tool_call["function"]["arguments"])
-                        tool_name = tool_call["function"]["name"]
-
-                        yield f"data: {json.dumps({'type': 'tool-start', 'name': tool_name, 'args': arguments})}\n\n"
+                        } for tc in response.choices[0].message.tool_calls]
                         
-                        if tool_name == "RAG":
-                            result = RAG(arguments["query"], 3)
+                        chat_messages.append({"role": "assistant", "tool_calls": tool_calls})
+                        
+                        for tool_call in tool_calls:
+                            arguments = json.loads(tool_call["function"]["arguments"])
+                            tool_name = tool_call["function"]["name"]
 
-                        elif tool_name == "FAQ":
-                            result = FAQ(arguments["query"], arguments.get("top_k", 1))
-
-                        elif tool_name == "links":
-                            result = links()
+                            yield f"data: {json.dumps({'type': 'tool-start', 'name': tool_name, 'args': arguments})}\n\n"
                             
-                        chat_messages.append({
-                                    "role": "tool",
-                                    "content": str(result),
-                                    "tool_call_id": tool_call["id"]
-                                })
-                        yield f"data: {json.dumps({'type': 'tool', 'name': tool_name, 'content': result, 'args': arguments})}\n\n"
-                    
-                    continue_tool_execution = True
+                            if tool_name == "RAG":
+                                result = RAG(arguments["query"], 3)
+                            elif tool_name == "FAQ":
+                                result = FAQ(arguments["query"], arguments.get("top_k", 1))
+                            elif tool_name == "links":
+                                result = links()
+                                
+                            chat_messages.append({
+                                "role": "tool",
+                                "content": str(result),
+                                "tool_call_id": tool_call["id"]
+                            })
+                            yield f"data: {json.dumps({'type': 'tool', 'name': tool_name, 'content': result, 'args': arguments})}\n\n"
+                        continue_tool_execution = True
+                    else:
+                        continue_tool_execution = False
                 else:
-                    continue_tool_execution = False
+                    # Existing streaming code
+                    current_message = ""
+                    tool_calls = []
+                    
+                    for chunk in response:
+                        if interrupt_flag:
+                            continue_tool_execution = False
+                            break
+
+                        delta = chunk.choices[0].delta
+                        
+                        if delta.content is not None:
+                            current_message += delta.content
+                            yield f"data: {json.dumps({'type': 'content', 'content': delta.content})}\n\n"
+                        
+                        elif delta.tool_calls:
+                            for tc in delta.tool_calls:
+                                # Show indicator when Python tool is called
+                                if tc.function and tc.function.name == "python": yield f"data: {json.dumps({'type': 'tool-start', 'name': 'coding', 'args': {'code': 'Writing code...'}})}\n\n"
+                                
+                                if len(tool_calls) <= tc.index:
+                                    tool_calls.append({
+                                        "id": "", "type": "function",
+                                        "function": {"name": "", "arguments": ""}
+                                    })
+                                tool_calls[tc.index] = {
+                                    "id": (tool_calls[tc.index]["id"] + (tc.id or "")),
+                                    "type": "function",
+                                    "function": {
+                                        "name": (tool_calls[tc.index]["function"]["name"] + (tc.function.name or "")),
+                                        "arguments": (tool_calls[tc.index]["function"]["arguments"] + (tc.function.arguments or ""))
+                                    }
+                                }
+                    
+                    if current_message:
+                        chat_messages.append({"role": "assistant", "content": current_message})
+                    
+                    if tool_calls:
+                        # Convert tool calls to dict format
+                        formatted_tool_calls = [{
+                            "id": tc["id"],
+                            "type": "function",
+                            "function": {
+                                "name": tc["function"]["name"],
+                                "arguments": tc["function"]["arguments"]
+                            }
+                        } for tc in tool_calls]
+                        
+                        chat_messages.append({"role": "assistant", "tool_calls": formatted_tool_calls})
+                        
+                        for tool_call in tool_calls:
+                            arguments = json.loads(tool_call["function"]["arguments"])
+                            tool_name = tool_call["function"]["name"]
+
+                            yield f"data: {json.dumps({'type': 'tool-start', 'name': tool_name, 'args': arguments})}\n\n"
+                            
+                            if tool_name == "RAG":
+                                result = RAG(arguments["query"], 3)
+
+                            elif tool_name == "FAQ":
+                                result = FAQ(arguments["query"], arguments.get("top_k", 1))
+
+                            elif tool_name == "links":
+                                result = links()
+                                
+                            chat_messages.append({
+                                        "role": "tool",
+                                        "content": str(result),
+                                        "tool_call_id": tool_call["id"]
+                                    })
+                            yield f"data: {json.dumps({'type': 'tool', 'name': tool_name, 'content': result, 'args': arguments})}\n\n"
+                        
+                        continue_tool_execution = True
+                    else:
+                        continue_tool_execution = False
                     
             except Exception as e:
                 print(f"Error in generate_response: {e}")
@@ -328,11 +382,26 @@ def get_messages():
             })
         elif msg["role"] == "assistant":
             if "tool_calls" in msg:
-                current_tool_results = msg["tool_calls"]
+                # Convert tool_calls objects to dict format for JSON serialization
+                if isinstance(msg["tool_calls"], list):
+                    current_tool_results = [
+                        {
+                            "id": tc.id if hasattr(tc, 'id') else tc["id"],
+                            "type": "function",
+                            "function": {
+                                "name": tc.function.name if hasattr(tc, 'function') else tc["function"]["name"],
+                                "arguments": tc.function.arguments if hasattr(tc, 'function') else tc["function"]["arguments"]
+                            }
+                        } for tc in msg["tool_calls"]
+                    ]
+                else:
+                    current_tool_results = msg["tool_calls"]
+                
                 current_tool_args = {
                     tc["id"]: json.loads(tc["function"]["arguments"])
-                    for tc in msg["tool_calls"]
+                    for tc in current_tool_results
                 }
+                
             formatted_messages.append({
                 "isUser": False,
                 "content": msg.get("content", ""),
@@ -341,7 +410,8 @@ def get_messages():
         elif msg["role"] == "tool":
             if formatted_messages and not formatted_messages[-1]["isUser"]:
                 if "tool_results" not in formatted_messages[-1]:
-                    formatted_messages[-1]["tool_results"] = []                
+                    formatted_messages[-1]["tool_results"] = []
+                
                 tool_call = next((tc for tc in current_tool_results 
                                if tc["id"] == msg["tool_call_id"]), None)
                 
