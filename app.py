@@ -11,7 +11,6 @@ from tool_managment import RAG
 from tool_managment import FAQ
 from tool_managment import links
 
-
 app = Flask(__name__)
 app.static_folder="templates"
 
@@ -114,7 +113,7 @@ def before_request():
                 {"role": "system", 
                 "content": "you are an Assistant in faculty of Computers and data science,"
                 "you Assist students."
-                "don't make up answers, it's important to use tools every question to get information."}
+                "don't make up answers, it's important to use FAQ every question to get information."}
             ]
         }
 
@@ -380,7 +379,7 @@ def new_conversation():
         {"role": "system", 
         "content": "you are an Assistant in faculty of Computers and data science,"
         "you Assist students."
-        "don't make up answers, it's important to use tools every question to get information."}
+        "don't make up answers, it's important to use FAQ every question to get information."}
     ]
     return jsonify({
         "status": "success", 
@@ -403,7 +402,7 @@ def delete_conversation(conversation_id):
                     {"role": "system", 
                     "content": "you are an Assistant in faculty of Computers and data science,"
                     "you Assist students."
-                    "don't make up answers, it's important to use tools every question to get information."}
+                    "don't make up answers, it's important to use FAQ every question to get information."}
                 ]
             return jsonify({"status": "success"})
         else:
