@@ -295,17 +295,17 @@ def chat_loop() -> None:
 
                     if tool_name == "RAG":
                         print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
-                        results = RAG(arguments["query"], 1)
-                        # for i,result in enumerate(results):
-                        #     print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
-                        #     print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
+                        results = RAG(arguments["query"], 2)
+                        for i,result in enumerate(results):
+                            print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
+                            print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
 
                     elif tool_name == "FAQ":
                         print(f"{Fore.YELLOW}• Query: {arguments['query']}{Style.RESET_ALL}")
                         results = FAQ(arguments["query"], arguments.get("top_k", 1))
-                        # for i,result in enumerate(results):
-                        #     print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
-                        #     print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
+                        for i,result in enumerate(results):
+                            print(f"{Fore.YELLOW}• Result({i}){Style.RESET_ALL}: {result['content']}")
+                            print(f"{Fore.YELLOW}• similarity: {Style.RESET_ALL}: {result['similarity']}")
 
                     elif tool_name == "links":
                         results = links()

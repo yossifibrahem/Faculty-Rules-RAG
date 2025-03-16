@@ -1,4 +1,4 @@
-from SearchRules import search_rules
+from RAG.SearchRules import search_rules
 
 def RAG(query, top_k=1):
     rules_results = search_rules(query, db_name="rules", top_k=top_k)

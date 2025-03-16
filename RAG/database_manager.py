@@ -1,5 +1,5 @@
 from typing import Dict, List, Tuple, Optional
-from embedding import VectorDB, EmbeddingClient
+from RAG.embedding import VectorDB, EmbeddingClient
 
 class DatabaseManager:
     _instance = None

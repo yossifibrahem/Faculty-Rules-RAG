@@ -1,8 +1,8 @@
-from embedding import TextSplitter
-from database_manager import DatabaseManager
+from RAG.embedding import TextSplitter
+from RAG.database_manager import DatabaseManager
 import os
 from typing import Dict, List, Tuple, Optional
-from embedding import VectorDB
+from RAG.embedding import VectorDB
 
 # Constants
 RULES_DB_PATH = 'rules_db.pkl'
